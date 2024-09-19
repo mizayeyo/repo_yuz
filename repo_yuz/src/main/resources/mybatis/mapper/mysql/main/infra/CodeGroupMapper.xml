@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- xml에서 주석 단축키 : ctrl + shift + c -->
+<!-- namepace : mapper와 연결될 dao -->
+
+<mapper namespace="com.fruits.infra.codegroup.CodeGroupDao">
+
+	<!-- 객체와 바인딩 시켜줄 Dto -->
+	<resultMap type="com.fruits.infra.codegroup.CodeGroupDto" id="resultMapObj"></resultMap>
+
+	<select id="selectList" resultMap="resultMapObj">
+	select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit,
+	    	(SELECT count(ifcdSeq) FROM code AS b WHERE 1 = 1 AND b.codegroup_ifcgSeq = a.ifcgSeq) AS xifcdSeqCount
+	FROM 
+		yuz.codegroup a
+	WHERE 1 = 1
+		<!--삭제여부 -->
+		<if test="shDelNy !=null and !shDelNy.equals('')">AND ifcgDelNy = #{shDelNy}</if>
+		<!--사용여부 -->
+		<if test="shUseNy !=null and !shUseNy.equals('')">AND ifcgUseNy = #{shUseNy}</if>
+		<!--날짜 검색 -->
+		<choose>
+	<when test="shOptionDate == 1">AND a.ifcgRegist BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+	<when test="shOptionDate == 2">AND a.ifcgEdit BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+	</choose>
+
+		<!--조건&검색어 검색 -->
+		<choose>
+		<when test="shOption == 1">AND ifcgSeq = #{shValue}</when>
+		<when test="shOption == 2">AND ifcgName LIKE CONCAT('%', #{shValue},'%')</when>
+		</choose>	
+		
+	ORDER BY
+		a.ifcgSeq desc
+	
+	
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO codegroup(
+			ifcgName,
+			ifcgUseNy,
+			ifcgOrder,
+			ifcgDesc,
+			ifcgDelNy,
+			ifcgRegist,
+			ifcgEdit
+		)VALUES(
+		#{ifcgName},
+		#{ifcgUseNy},
+		#{ifcgOrder},
+		#{ifcgDesc},
+		#{ifcgDelNy},
+		now(),
+		now()
+	)
+	</insert>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = #{ifcgSeq}	
+	
+	</select>
+	
+	<update id="update">
+		UPDATE yuz.codegroup
+		SET
+			ifcgName = #{ifcgName},
+			ifcgUseNy = #{ifcgUseNy},
+			ifcgOrder = #{ifcgOrder},
+			ifcgDesc = #{ifcgDesc},
+			ifcgDelNy = #{ifcgDelNy}
+		WHERE 1 = 1
+			AND ifcgSeq = #{ifcgSeq}	
+	</update>
+	
+	  <update id="uelete">
+	  		UPDATE yuz.codegroup
+	  		SET
+	  			ifcgDelNy = 1
+	  		WHERE 1 = 1
+	  			AND ifcgSeq = #{ifcgSeq}	
+	  
+	  </update>
+	  
+	  <delete id="delete">
+	  		DELETE FROM yuz.codegroup
+	  		WHERE 1=1
+	  			AND ifcgSeq = #{ifcgSeq}
+	  </delete>
+	  
+</mapper>
