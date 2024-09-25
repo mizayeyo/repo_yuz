@@ -1,0 +1,2302 @@
+2024-09-17T20:04:33.291 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-17T20:04:33.293 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-17T20:04:33.294 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-17T20:04:33.295 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-2 - Starting... 
+2024-09-17T20:04:33.307 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-2 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@21f8f6f6 
+2024-09-17T20:04:33.307 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-2 - Start completed. 
+2024-09-17T20:04:33.308 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:04:35.791 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:04:35.792 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:04:35.793 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:05:42.452 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:05:42.454 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:05:42.456 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:10:10.490 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 0 msec} 
+2024-09-17T20:10:10.491 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:10:10.491 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:31:45.896 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 1 msec} 
+2024-09-17T20:31:45.898 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:31:45.900 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:31:50.933 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T20:31:50.935 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:31:50.936 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:35:55.996 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 3 msec} 
+2024-09-17T20:35:55.999 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:35:56.000 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:35:59.086 [RMI TCP Connection(113)-127.0.0.1] INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2024-09-17T20:35:59.087 [RMI TCP Connection(113)-127.0.0.1] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:35:59.246 [RMI TCP Connection(113)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated... 
+2024-09-17T20:35:59.248 [RMI TCP Connection(113)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed. 
+2024-09-17T20:36:00.547 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 40684 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-17T20:36:00.549 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-17T20:36:00.576 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-17T20:36:00.576 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-17T20:36:01.193 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-17T20:36:01.200 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:36:01.202 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-17T20:36:01.202 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-17T20:36:01.238 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-17T20:36:01.238 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 661 ms 
+2024-09-17T20:36:01.687 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-17T20:36:01.697 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:36:01.710 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-17T20:36:01.715 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 1.353 seconds (process running for 1.826) 
+2024-09-17T20:36:07.321 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-17T20:36:07.321 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-17T20:36:07.322 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-17T20:36:07.359 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Starting... 
+2024-09-17T20:36:07.521 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@6a7c0948 
+2024-09-17T20:36:07.522 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Start completed. 
+2024-09-17T20:36:07.544 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 9 msec} 
+2024-09-17T20:36:07.559 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:36:07.561 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:38:13.301 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T20:38:13.303 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:38:13.304 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:38:20.171 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T20:38:20.174 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:38:20.176 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:38:23.554 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:38:24.503 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 0 msec} 
+2024-09-17T20:38:24.507 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 2 msec} 
+2024-09-17T20:38:24.509 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:38:43.836 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:38:48.633 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 1 msec} 
+2024-09-17T20:38:48.637 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 2 msec} 
+2024-09-17T20:38:48.640 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:40:17.969 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T20:40:17.971 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:40:17.973 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:40:23.061 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T20:40:23.063 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:40:23.066 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:40:30.126 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 0 msec} 
+2024-09-17T20:40:30.129 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:40:30.130 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:40:53.956 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 0 msec} 
+2024-09-17T20:40:53.958 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:40:56.501 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '5'
+ {executed in 1 msec} 
+2024-09-17T20:41:05.625 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '5'
+ {executed in 1 msec} 
+2024-09-17T20:41:12.779 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '4'
+ {executed in 1 msec} 
+2024-09-17T20:42:23.194 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 0 msec} 
+2024-09-17T20:42:25.180 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 0 msec} 
+2024-09-17T20:42:25.183 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:42:25.185 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:42:42.747 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '5'
+ {executed in 0 msec} 
+2024-09-17T20:42:44.951 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '5'
+ {executed in 1 msec} 
+2024-09-17T20:43:21.456 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:43:21.457 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:43:21.460 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:43:27.330 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 2 msec} 
+2024-09-17T20:43:27.330 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:43:27.331 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:43:30.049 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:43:30.051 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:43:30.053 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:44:24.634 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 0 msec} 
+2024-09-17T20:44:27.308 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:44:27.310 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:44:27.313 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 2 msec} 
+2024-09-17T20:44:32.707 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:44:32.709 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:44:32.711 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:44:51.047 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '4'
+ {executed in 0 msec} 
+2024-09-17T20:44:56.084 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:44:57.394 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T20:44:57.396 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:44:57.398 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:45:44.473 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:45:46.444 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 0 msec} 
+2024-09-17T20:45:46.446 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:45:46.447 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:47:03.129 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 0 msec} 
+2024-09-17T20:47:05.629 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:47:05.630 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:47:05.632 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:47:11.016 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE code
+		SET
+			ifcdName = '여성',
+			ifcdUseNy = 0,
+			ifcdOrder = 4,
+			ifcdDesc = NULL,
+			ifcdDelNy = 0,
+			ifcdEdit = now(),
+			codegroup_ifcgSeq = '1'
+		WHERE 1 = 1
+			AND ifcdSeq = '2'
+ {executed in 5 msec} 
+2024-09-17T20:47:11.022 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:47:13.279 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 0 msec} 
+2024-09-17T20:47:13.282 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:47:13.284 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:47:47.284 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T20:47:47.286 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:47:47.288 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:47:47.296 [http-nio-8080-exec-10] ERROR o.t.TemplateEngine - [THYMELEAF][http-nio-8080-exec-10] Exception processing template "/xdm/v1/infra/code/codeXdmMfom": An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmMfom.html]") 
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmMfom.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "item?.ifcgDesc" (template: "/xdm/v1/infra/code/codeXdmMfom" - line 590, col 94)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "item?.ifcgDesc" (template: "/xdm/v1/infra/code/codeXdmMfom" - line 590, col 94)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'ifcgDesc' cannot be found on object of type 'com.fruits.infra.code.CodeDto' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 69 common frames omitted
+2024-09-17T20:47:47.298 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmMfom.html]")] with root cause 
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'ifcgDesc' cannot be found on object of type 'com.fruits.infra.code.CodeDto' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-09-17T20:47:47.310 [http-nio-8080-exec-10] ERROR o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [/xdm/v1/infra/code/codeXdmMfom] and exception [An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmMfom.html]")] as the response has already been committed. As a result, the response may have the wrong status code. 
+2024-09-17T20:47:49.693 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:47:49.694 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:47:49.695 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:47:49.699 [http-nio-8080-exec-2] ERROR o.t.TemplateEngine - [THYMELEAF][http-nio-8080-exec-2] Exception processing template "/xdm/v1/infra/code/codeXdmMfom": An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmMfom.html]") 
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmMfom.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "item?.ifcgDesc" (template: "/xdm/v1/infra/code/codeXdmMfom" - line 590, col 94)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "item?.ifcgDesc" (template: "/xdm/v1/infra/code/codeXdmMfom" - line 590, col 94)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'ifcgDesc' cannot be found on object of type 'com.fruits.infra.code.CodeDto' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 69 common frames omitted
+2024-09-17T20:47:49.700 [http-nio-8080-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmMfom.html]")] with root cause 
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'ifcgDesc' cannot be found on object of type 'com.fruits.infra.code.CodeDto' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleOpenElementEnd(TemplateHandlerAdapterMarkupHandler.java:304)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:278)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleOpenElementEnd(OutputExpressionInlinePreProcessorHandler.java:186)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleOpenElementEnd(InlinedOutputExpressionMarkupHandler.java:124)
+	at org.attoparser.HtmlElement.handleOpenElementEnd(HtmlElement.java:109)
+	at org.attoparser.HtmlMarkupHandler.handleOpenElementEnd(HtmlMarkupHandler.java:297)
+	at org.attoparser.MarkupEventProcessorHandler.handleOpenElementEnd(MarkupEventProcessorHandler.java:402)
+	at org.attoparser.ParsingElementMarkupUtil.parseOpenElement(ParsingElementMarkupUtil.java:159)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:710)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-09-17T20:47:49.703 [http-nio-8080-exec-2] ERROR o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [/xdm/v1/infra/code/codeXdmMfom] and exception [An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmMfom.html]")] as the response has already been committed. As a result, the response may have the wrong status code. 
+2024-09-17T20:48:04.037 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:48:04.038 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:04.039 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:48:09.589 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 0 msec} 
+2024-09-17T20:48:09.591 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:09.592 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:18.346 [RMI TCP Connection(22)-127.0.0.1] INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2024-09-17T20:48:18.349 [RMI TCP Connection(22)-127.0.0.1] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:48:18.528 [RMI TCP Connection(22)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2024-09-17T20:48:18.533 [RMI TCP Connection(22)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2024-09-17T20:48:19.869 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 2096 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-17T20:48:19.870 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-17T20:48:19.896 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-17T20:48:19.896 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-17T20:48:20.462 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-17T20:48:20.469 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:48:20.471 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-17T20:48:20.471 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-17T20:48:20.501 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-17T20:48:20.501 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 604 ms 
+2024-09-17T20:48:20.913 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-17T20:48:20.924 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:48:20.938 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-17T20:48:20.944 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 1.278 seconds (process running for 1.787) 
+2024-09-17T20:48:34.226 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-17T20:48:34.226 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-17T20:48:34.227 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-17T20:48:34.270 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Starting... 
+2024-09-17T20:48:34.435 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7a5b4c25 
+2024-09-17T20:48:34.436 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Start completed. 
+2024-09-17T20:48:34.455 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 5 msec} 
+2024-09-17T20:48:34.466 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:34.468 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:48:42.462 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. UPDATE code
+		SET
+			ifcdName = '남성',
+			ifcdUseNy = 1,
+			ifcdOrder = 1,
+			ifcdDesc = NULL,
+			ifcdDelNy = 0,
+			ifcdEdit = now(),
+			codegroup_ifcgSeq = '1'
+		WHERE 1 = 1
+			AND ifcdSeq = '1'
+ {executed in 4 msec} 
+2024-09-17T20:48:42.471 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 2 msec} 
+2024-09-17T20:48:44.239 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 1 msec} 
+2024-09-17T20:48:44.243 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:44.246 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:47.409 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 1 msec} 
+2024-09-17T20:48:47.411 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:47.412 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:48:50.016 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:48:51.098 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 0 msec} 
+2024-09-17T20:48:51.100 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:51.102 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:56.194 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 1 msec} 
+2024-09-17T20:48:56.197 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:48:56.199 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:49:02.380 [RMI TCP Connection(10)-127.0.0.1] INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2024-09-17T20:49:02.383 [RMI TCP Connection(10)-127.0.0.1] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:49:02.575 [RMI TCP Connection(10)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2024-09-17T20:49:02.581 [RMI TCP Connection(10)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2024-09-17T20:49:03.909 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 25792 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-17T20:49:03.910 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-17T20:49:03.938 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-17T20:49:03.938 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-17T20:49:04.549 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-17T20:49:04.556 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:49:04.558 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-17T20:49:04.558 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-17T20:49:04.592 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-17T20:49:04.592 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 654 ms 
+2024-09-17T20:49:05.057 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-17T20:49:05.066 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:49:05.079 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-17T20:49:05.085 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 1.407 seconds (process running for 1.878) 
+2024-09-17T20:49:09.179 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-17T20:49:09.180 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-17T20:49:09.181 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 0 ms 
+2024-09-17T20:49:09.221 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Starting... 
+2024-09-17T20:49:09.380 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7a5b4c25 
+2024-09-17T20:49:09.381 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Start completed. 
+2024-09-17T20:49:09.399 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 6 msec} 
+2024-09-17T20:49:09.410 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:49:09.411 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:49:13.912 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:49:13.915 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 2 msec} 
+2024-09-17T20:49:13.917 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:49:22.446 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:49:23.466 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 1 msec} 
+2024-09-17T20:49:23.469 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:49:23.472 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:50:34.386 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:50:35.269 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 0 msec} 
+2024-09-17T20:50:35.271 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:50:35.273 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:50:41.277 [RMI TCP Connection(12)-127.0.0.1] INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2024-09-17T20:50:41.279 [RMI TCP Connection(12)-127.0.0.1] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:50:41.421 [RMI TCP Connection(12)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2024-09-17T20:50:41.426 [RMI TCP Connection(12)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2024-09-17T20:50:42.653 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 14804 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-17T20:50:42.654 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-17T20:50:42.679 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-17T20:50:42.679 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-17T20:50:43.299 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-17T20:50:43.306 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:50:43.308 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-17T20:50:43.308 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-17T20:50:43.342 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-17T20:50:43.342 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 663 ms 
+2024-09-17T20:50:43.788 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-17T20:50:43.798 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-17T20:50:43.812 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-17T20:50:43.819 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 1.356 seconds (process running for 1.791) 
+2024-09-17T20:50:48.965 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-17T20:50:48.965 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-17T20:50:48.966 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-17T20:50:48.997 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Starting... 
+2024-09-17T20:50:49.183 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@5b372f5d 
+2024-09-17T20:50:49.184 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Start completed. 
+2024-09-17T20:50:49.200 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 5 msec} 
+2024-09-17T20:50:51.736 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T20:50:53.694 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '1'
+ {executed in 2 msec} 
+2024-09-17T20:50:53.696 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:50:53.697 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T20:50:56.690 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T20:50:56.693 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T20:50:56.695 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 

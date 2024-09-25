@@ -1,0 +1,97 @@
+2024-09-19T09:06:16.368 [HikariPool-2 housekeeper] WARN c.z.h.p.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=8h49m48s831ms962µs). 
+2024-09-19T09:08:50.154 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+81. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit,
+	    	(SELECT count(ifcdSeq) FROM code AS b WHERE 1 = 1 AND b.codegroup_ifcgSeq = a.ifcgSeq) AS xifcdSeqCount
+	FROM 
+		yuz.codegroup a
+	WHERE 1 = 1
+
+		 AND ifcgDelNy = 1 
+
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 3 msec} 
+2024-09-19T09:08:52.746 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+81. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit,
+	    	(SELECT count(ifcdSeq) FROM code AS b WHERE 1 = 1 AND b.codegroup_ifcgSeq = a.ifcgSeq) AS xifcdSeqCount
+	FROM 
+		yuz.codegroup a
+	WHERE 1 = 1
+
+		 AND ifcgDelNy = 0 
+
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 0 msec} 
+2024-09-19T09:08:55.628 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+81. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit,
+	    	(SELECT count(ifcdSeq) FROM code AS b WHERE 1 = 1 AND b.codegroup_ifcgSeq = a.ifcgSeq) AS xifcdSeqCount
+	FROM 
+		yuz.codegroup a
+	WHERE 1 = 1
+
+		 AND ifcgUseNy = 1 
+
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-19T09:09:00.042 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+81. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit,
+	    	(SELECT count(ifcdSeq) FROM code AS b WHERE 1 = 1 AND b.codegroup_ifcgSeq = a.ifcgSeq) AS xifcdSeqCount
+	FROM 
+		yuz.codegroup a
+	WHERE 1 = 1
+
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-19T09:09:13.961 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+81. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit,
+	    	(SELECT count(ifcdSeq) FROM code AS b WHERE 1 = 1 AND b.codegroup_ifcgSeq = a.ifcgSeq) AS xifcdSeqCount
+	FROM 
+		yuz.codegroup a
+	WHERE 1 = 1
+
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 

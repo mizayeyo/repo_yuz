@@ -1,0 +1,618 @@
+2024-09-17T21:11:55.320 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 2 msec} 
+2024-09-17T21:11:57.065 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T21:11:57.068 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:11:57.070 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:12:12.862 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 0 msec} 
+2024-09-17T21:12:12.863 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T21:12:12.864 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T21:19:57.421 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-17T21:19:57.426 [Thread-5] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-17T21:19:57.581 [Thread-5] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2024-09-17T21:19:57.588 [Thread-5] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2024-09-17T21:19:57.643 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 14804 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-17T21:19:57.643 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-17T21:19:57.783 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-17T21:19:57.783 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-17T21:19:57.784 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-17T21:19:57.784 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-17T21:19:57.797 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-17T21:19:57.797 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 153 ms 
+2024-09-17T21:19:57.906 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-17T21:19:57.912 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-17T21:19:57.916 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-17T21:19:57.919 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 0.295 seconds (process running for 1755.891) 
+2024-09-17T21:19:57.921 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-17T21:21:08.310 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-17T21:21:08.311 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-17T21:21:08.311 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 0 ms 
+2024-09-17T21:21:08.312 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-2 - Starting... 
+2024-09-17T21:21:08.323 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-2 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@1117e8e5 
+2024-09-17T21:21:08.323 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-2 - Start completed. 
+2024-09-17T21:21:08.324 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T21:21:08.326 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:21:08.327 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T21:21:18.736 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T21:21:18.738 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:21:18.740 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:21:29.708 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 0 msec} 
+2024-09-17T21:21:29.711 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 2 msec} 
+2024-09-17T21:21:29.712 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T21:21:33.951 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T21:21:33.953 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:21:48.983 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T21:21:50.652 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T21:21:50.655 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 2 msec} 
+2024-09-17T21:21:50.657 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:22:23.392 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 1 msec} 
+2024-09-17T21:22:23.394 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:22:23.395 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:22:26.931 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. UPDATE code
+		SET
+			ifcdName = 'df',
+			ifcdUseNy = 1,
+			ifcdOrder = 10,
+			ifcdDesc = '',
+			ifcdDelNy = 0,
+			ifcdEdit = now(),
+			codegroup_ifcgSeq = '3'
+		WHERE 1 = 1
+			AND ifcdSeq = '3'
+ {executed in 5 msec} 
+2024-09-17T21:22:26.935 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T21:22:29.057 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '3'
+ {executed in 0 msec} 
+2024-09-17T21:22:29.059 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T21:22:29.060 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:22:53.709 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:22:53.711 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:23:04.983 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. INSERT INTO code(
+		ifcdName,
+		ifcdUseNy,
+		ifcdOrder,
+		ifcdDesc,
+		ifcdDelNy,
+		ifcdRegist,
+		ifcdEdit,
+		codegroup_ifcgSeq
+		)VALUES(
+		'테스트2',
+		1,
+		7,
+		NULL,
+		0,
+		now(),
+		now(),
+		'2'
+		)
+ {executed in 4 msec} 
+2024-09-17T21:23:04.988 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 1 msec} 
+2024-09-17T21:23:09.370 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '4'
+ {executed in 1 msec} 
+2024-09-17T21:23:09.372 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 2 msec} 
+2024-09-17T21:23:09.374 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:23:20.830 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T21:23:20.832 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:23:45.408 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:23:45.409 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 0 msec} 
+2024-09-17T21:24:31.380 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+			b.ifcdDelNy,
+			b.ifcdRegist,
+			b.ifcdEdit,
+			b.codegroup_ifcgSeq
+		FROM
+			yuz.code b
+		WHERE 1 = 1
+			AND b.ifcdSeq = '2'
+ {executed in 1 msec} 
+2024-09-17T21:24:31.384 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:24:31.386 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName
+		FROM
+			codegroup a
+		WHERE 1 = 1
+			AND a.ifcgDelNy = 0
+		ORDER BY
+			a.ifcgOrder DESC
+ {executed in 1 msec} 
+2024-09-17T21:24:40.227 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. UPDATE code
+		SET
+			ifcdName = '여성',
+			ifcdUseNy = 0,
+			ifcdOrder = 4,
+			ifcdDesc = '',
+			ifcdDelNy = 0,
+			ifcdEdit = now(),
+			codegroup_ifcgSeq = '1'
+		WHERE 1 = 1
+			AND ifcdSeq = '2'
+ {executed in 4 msec} 
+2024-09-17T21:24:40.230 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 0 msec} 

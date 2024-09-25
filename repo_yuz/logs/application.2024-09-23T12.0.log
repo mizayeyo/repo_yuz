@@ -1,0 +1,18 @@
+2024-09-23T12:20:44.745 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+31. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit,
+	    	(SELECT count(ifcdSeq) FROM code AS b WHERE 1 = 1 AND b.codegroup_ifcgSeq = a.ifcgSeq) AS xifcdSeqCount
+	FROM 
+		yuz.codegroup a
+	WHERE 1 = 1
+
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 3 msec} 

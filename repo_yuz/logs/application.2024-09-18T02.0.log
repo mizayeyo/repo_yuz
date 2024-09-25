@@ -1,0 +1,459 @@
+2024-09-18T02:00:32.162 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-18T02:00:32.166 [Thread-23] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:00:32.356 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 31204 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-18T02:00:32.357 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-18T02:00:32.479 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-18T02:00:32.480 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:00:32.480 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-18T02:00:32.480 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-18T02:00:32.491 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-18T02:00:32.491 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 132 ms 
+2024-09-18T02:00:32.566 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-18T02:00:32.570 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:00:32.573 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-18T02:00:32.576 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 0.238 seconds (process running for 1906.203) 
+2024-09-18T02:00:32.577 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-18T02:04:47.823 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-18T02:04:47.823 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-18T02:04:47.824 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-18T02:04:47.825 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-2 - Starting... 
+2024-09-18T02:04:47.838 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-2 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4364949e 
+2024-09-18T02:04:47.839 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-2 - Start completed. 
+2024-09-18T02:04:47.840 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:04:47.842 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:04:48.988 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '7'
+ {executed in 0 msec} 
+2024-09-18T02:05:45.426 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '7'
+ {executed in 1 msec} 
+2024-09-18T02:05:54.955 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '7'
+ {executed in 0 msec} 
+2024-09-18T02:07:37.664 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '7'
+ {executed in 0 msec} 
+2024-09-18T02:13:15.340 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '7'
+ {executed in 0 msec} 
+2024-09-18T02:13:26.120 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '4'
+ {executed in 0 msec} 
+2024-09-18T02:17:12.163 [RMI TCP Connection(80)-127.0.0.1] INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2024-09-18T02:17:12.165 [RMI TCP Connection(80)-127.0.0.1] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:17:12.303 [RMI TCP Connection(80)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-2 - Shutdown initiated... 
+2024-09-18T02:17:12.307 [RMI TCP Connection(80)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-2 - Shutdown completed. 
+2024-09-18T02:17:13.563 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 12080 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-18T02:17:13.565 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-18T02:17:13.593 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-18T02:17:13.593 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-18T02:17:14.150 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-18T02:17:14.156 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:17:14.158 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-18T02:17:14.158 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-18T02:17:14.188 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-18T02:17:14.188 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 595 ms 
+2024-09-18T02:17:14.617 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-18T02:17:14.627 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:17:14.641 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-18T02:17:14.647 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 1.277 seconds (process running for 1.709) 
+2024-09-18T02:17:29.272 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-18T02:17:29.273 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-18T02:17:29.273 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 0 ms 
+2024-09-18T02:17:29.314 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Starting... 
+2024-09-18T02:17:29.471 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@cb81a4 
+2024-09-18T02:17:29.472 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Start completed. 
+2024-09-18T02:17:29.490 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '4'
+ {executed in 6 msec} 
+2024-09-18T02:25:17.646 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '4'
+ {executed in 1 msec} 
+2024-09-18T02:26:33.166 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 0 msec} 
+2024-09-18T02:26:33.168 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:52:55.272 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-18T02:52:55.279 [Thread-5] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:52:55.417 [Thread-5] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2024-09-18T02:52:55.421 [Thread-5] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2024-09-18T02:52:55.476 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 12080 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-18T02:52:55.476 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-18T02:52:55.612 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-18T02:52:55.613 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:52:55.613 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-18T02:52:55.613 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-18T02:52:55.624 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-18T02:52:55.624 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 145 ms 
+2024-09-18T02:52:55.702 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-18T02:52:55.706 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:52:55.709 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-18T02:52:55.711 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 0.256 seconds (process running for 2142.761) 
+2024-09-18T02:52:55.713 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-18T02:53:13.852 [RMI TCP Connection(48)-127.0.0.1] INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2024-09-18T02:53:13.853 [RMI TCP Connection(48)-127.0.0.1] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:53:15.052 [restartedMain] INFO c.f.RepoYuzApplication - Starting RepoYuzApplication using Java 17.0.11 with PID 33788 (C:\factory\ws_sts4_4240\repo_yuz\repo_yuz\bin\main started by mizay in C:\factory\ws_sts4_4240\repo_yuz\repo_yuz) 
+2024-09-18T02:53:15.054 [restartedMain] INFO c.f.RepoYuzApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-18T02:53:15.078 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-18T02:53:15.078 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-18T02:53:15.648 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-18T02:53:15.655 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:53:15.657 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-18T02:53:15.657 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-18T02:53:15.687 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-18T02:53:15.687 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 609 ms 
+2024-09-18T02:53:16.090 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-18T02:53:16.101 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-18T02:53:16.113 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-18T02:53:16.119 [restartedMain] INFO c.f.RepoYuzApplication - Started RepoYuzApplication in 1.265 seconds (process running for 1.694) 
+2024-09-18T02:53:23.729 [http-nio-8080-exec-2] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-18T02:53:23.729 [http-nio-8080-exec-2] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-18T02:53:23.730 [http-nio-8080-exec-2] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-18T02:53:24.862 [http-nio-8080-exec-10] INFO c.z.h.HikariDataSource - HikariPool-1 - Starting... 
+2024-09-18T02:53:25.027 [http-nio-8080-exec-10] INFO c.z.h.p.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@49dc1185 
+2024-09-18T02:53:25.028 [http-nio-8080-exec-10] INFO c.z.h.HikariDataSource - HikariPool-1 - Start completed. 
+2024-09-18T02:53:25.047 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '4'
+ {executed in 8 msec} 
+2024-09-18T02:54:41.055 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:54:41.059 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:54:47.528 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '4'
+ {executed in 0 msec} 
+2024-09-18T02:54:53.626 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:54:53.630 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:54:57.110 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '4'
+ {executed in 1 msec} 
+2024-09-18T02:55:02.740 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '7'
+ {executed in 0 msec} 
+2024-09-18T02:55:05.324 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:55:05.327 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:56:19.218 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 1 msec} 
+2024-09-18T02:56:19.220 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+		a.ifcgSeq,
+	    a.ifcgName,
+	    a.ifcgUseNy,
+	    a.ifcgOrder,
+	    a.ifcgDesc,
+	    a.ifcgDelNy,
+	    a.ifcgRegist,
+	    a.ifcgEdit
+	FROM 
+		yuz.codegroup a
+	ORDER BY
+		a.ifcgSeq desc
+ {executed in 0 msec} 
+2024-09-18T02:56:20.342 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. SELECT
+			a.ifcgSeq,
+			a.ifcgName,
+			a.ifcgUseNy,
+			a.ifcgOrder,
+			a.ifcgDesc,
+			a.ifcgDelNy,
+			a.ifcgRegist,
+			a.ifcgEdit
+		FROM
+			yuz.codegroup a
+		WHERE 1 = 1
+			AND a.ifcgSeq = '7'
+ {executed in 1 msec} 

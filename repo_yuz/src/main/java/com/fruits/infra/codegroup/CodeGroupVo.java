@@ -3,14 +3,16 @@ package com.fruits.infra.codegroup;
 public class CodeGroupVo {
 	
 	// search
-	private Integer shDelNy;
-	private Integer shUseNy;
-	private Integer shOption;
-	private String shValue;
-	private String shDateStart;
-	private String shDateEnd;
-	private Integer shOptionDate;
+	private Integer shDelNy;          //삭제여부검색
+	private Integer shUseNy;          //사용여부검색  
+	private Integer shOption;         //검색옵션
+	private String shValue;           //검색값
+	private String shDateStart;       //검색시작날짜
+	private String shDateEnd;         //검색끝날짜
+	private Integer shOptionDate;     //날짜검색옵션
 	
+	
+
 	//----- getter&setter-----
 	
 	
@@ -57,8 +59,24 @@ public class CodeGroupVo {
 		this.shOptionDate = shOptionDate;
 	}
 	
+
+
+
+
+
+
 	
+	
+		
+	}
 	
 	
 
-}
+
+
+
+
+	
+	
+
+

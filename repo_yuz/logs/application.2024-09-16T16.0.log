@@ -1,0 +1,75 @@
+2024-09-16T16:40:20.122 [HikariPool-1 housekeeper] WARN c.z.h.p.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m57s382ms252µs500ns). 
+2024-09-16T16:41:12.805 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. INSERT INTO code(
+			ifcdName,
+			ifcdUseNy,
+			ifcdOrder,
+			ifcdDesc,
+			ifcdDelNy,
+			ifcdREgist,
+			ifcdEdit,
+			codegroup_ifcgSeq
+		) VALUES (
+			'ㅇㅇ',
+			0,
+			10,
+			NULL,
+			0,
+			now(),
+			now(),
+			'2'
+		)
+ {executed in 3 msec} 
+2024-09-16T16:41:12.809 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			yuz.code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 0 msec} 
+2024-09-16T16:46:41.343 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. INSERT INTO code(
+			ifcdName,
+			ifcdUseNy,
+			ifcdOrder,
+			ifcdDesc,
+			ifcdDelNy,
+			ifcdREgist,
+			ifcdEdit,
+			codegroup_ifcgSeq
+		) VALUES (
+			'ㅇㅇ',
+			0,
+			10,
+			NULL,
+			0,
+			now(),
+			now(),
+			'2'
+		)
+ {executed in 2 msec} 
+2024-09-16T16:46:41.349 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+21. SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq
+		FROM 
+			yuz.code b
+		ORDER BY
+			b.ifcdSeq desc
+ {executed in 0 msec} 

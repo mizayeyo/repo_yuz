@@ -19,6 +19,13 @@ public class CodeGroupController {
 	@RequestMapping(value="/xdm/v1/infra/codegroup/codeGroupXdmList")
 	public String codeGroupXdmList(CodeGroupVo codeGroupVo, Model model) {
 		
+		//날짜 필드에 시간 추가
+		codeGroupVo.setShDateStart(codeGroupVo.getShDateStart()+" 00:00:00");
+		codeGroupVo.setShDateEnd(codeGroupVo.getShDateEnd()+" 23:59:59");
+		
+		
+		
+		
 		model.addAttribute("list",codeGroupService.selectList(codeGroupVo));
 		//""안에 html에 넘겨줄 이름 = 변수명
 		
@@ -86,5 +93,7 @@ public class CodeGroupController {
     	  codeGroupService.delete(codeGroupDto);
     	  return "redirect:/xdm/v1/infra/codegroup/codeGroupXdmList";
       }
+      
+      
 
 }
