@@ -25,7 +25,7 @@
 			b.ifcdSeq desc
 	</select>
 	
-<!--  code에 codegroup 연결 -->
+<!-- //code에 codegroup 연결 -->
 	<select id="selectListCodeGroup" resultMap="resultMapObj">
 		SELECT
 			a.ifcgSeq,
@@ -38,7 +38,9 @@
 			a.ifcgOrder DESC			
 	
 	</select>	
-	<!-- 데이터 입력(insert) -->
+	
+	
+<!-- //	데이터 입력(insert) -->
 	<insert id="insert">
 		INSERT INTO code(
 		ifcdName,
@@ -61,7 +63,7 @@
 		)
 	</insert>
 	
-	<!-- 테이터 한개 출력(select) -->
+<!-- //	테이터 한개 출력(select) -->
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
 			b.ifcdSeq,
@@ -79,7 +81,7 @@
 			AND b.ifcdSeq = #{ifcdSeq}	
 	
 	</select>
-	<!-- 테이터 수정(update) -->
+<!--         //	테이터 수정(update) -->
 		<update id="update">
 		UPDATE code
 		SET
@@ -94,7 +96,7 @@
 			AND ifcdSeq = #{ifcdSeq}	
 		</update>
 		
-	<!-- 삭제여부 수정(uelete) -->
+<!--         //삭제여부 수정(uelete) -->
 	
 		<update id="uelete">
 			UPDATE yuz.code

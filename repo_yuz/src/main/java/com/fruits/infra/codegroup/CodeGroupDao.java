@@ -30,6 +30,8 @@ public interface CodeGroupDao {
 	//delete
 	public int delete(CodeGroupDto codeGroupDto);
 	
+	// paging
+	public int selectOneCount(CodeGroupVo codeGroupVo);
 
 	
 

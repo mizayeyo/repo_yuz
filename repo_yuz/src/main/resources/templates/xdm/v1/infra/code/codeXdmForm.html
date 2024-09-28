@@ -522,7 +522,7 @@
           <li class="breadcrumb-item">page2</li>
           <li class="breadcrumb-item active">Default</li>
         </ol>
-        <p class="p1">CODE GROUP</p1>
+        <p class="p1">CODE FORM</p1>
       </nav>
     </div><!-- End Page Title -->
     <section class="section">
@@ -539,9 +539,9 @@
                 </div>
                  <div class="col-sm-12 col-md-6 col-lg-3">
                     <label for="validationCustom01" class="form-label mb-0">코드그룹 번호 <font color="red"><strong>*</strong></font></label>
-                    <select class="form-select" name="codegroup_ifcgSeq"
+                    <select class="form-select" id="ifcgSeq" name="ifcgSeq"
                     	style="padding: .375rem .75rem;">
-                                <option value"">코드 그룹 번호</option>
+                                <option value="">코드 그룹 번호</option>
                                 <option th:each = "list:${listCodeGroup}"
                                         th:value = "${list.ifcgSeq}" th:text="${list.ifcgName}">
                                 </option>
@@ -550,7 +550,7 @@
                   </div>
                   <div class="row g-2">
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                  <label for="calidationCustom01" class="form-label mb-0">코드그룹 이름</label>
+                  <label for="calidationCustom01" class="form-label mb-0">코드 이름</label>
                   <input type="text" class="form-control" name="ifcdName" placeholder="코드 이름">
                 </div>
               

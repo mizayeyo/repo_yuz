@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.fruits.infra.codegroup.CodeGroupDto;
+import com.fruits.infra.codegroup.CodeGroupVo;
+
 @Repository
 public interface CodeDao {
 	
@@ -12,7 +15,7 @@ public interface CodeDao {
 	public List<CodeDto> selectList();
 	
 	//selectListCodeGroup
-	public List<CodeDto> selectListCodeGroup();
+	public List<CodeGroupDto> selectListCodeGroup();
 	
 	//insert
 	public int insert(CodeDto codeDto);

@@ -61,15 +61,21 @@ public class CodeGroupService {
 	//uelete
 	public int uelete(CodeGroupDto codeGroupDto) {
 		return codeGroupDao.uelete(codeGroupDto);
-	}
+	}                                                                                                                                                                                   
 	
 	//delete
 	public int delete(CodeGroupDto codeGroupDto) {
 		return codeGroupDao.delete(codeGroupDto);
 	}
 	
+	
+	// paging
+	public int selectOneCount(CodeGroupVo codeGroupVo) {
+		return codeGroupDao.selectOneCount(codeGroupVo);
+	}
+	
 
-}
+}	
 
 
 

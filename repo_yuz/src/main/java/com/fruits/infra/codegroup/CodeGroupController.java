@@ -1,11 +1,12 @@
 package com.fruits.infra.codegroup;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.fruits.common.util.UtilDateTime;
 
 @Controller
 public class CodeGroupController {
@@ -17,19 +18,27 @@ public class CodeGroupController {
 	CodeGroupService codeGroupService;
 	
 	@RequestMapping(value="/xdm/v1/infra/codegroup/codeGroupXdmList")
-	public String codeGroupXdmList(CodeGroupVo codeGroupVo, Model model) {
+	public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo codeGroupVo, Model model) {
 		
 		//날짜 필드에 시간 추가
-		codeGroupVo.setShDateStart(codeGroupVo.getShDateStart()+" 00:00:00");
-		codeGroupVo.setShDateEnd(codeGroupVo.getShDateEnd()+" 23:59:59");
+//		codeGroupVo.setShDateStart(codeGroupVo.getShDateStart()+" 00:00:00");
+//		codeGroupVo.setShDateEnd(codeGroupVo.getShDateEnd()+" 23:59:59");
+		
+		// 초기값 세팅이 없는 경우 사용
+		codeGroupVo.setShDateStart(codeGroupVo.getShDateStart() == null || codeGroupVo.getShDateStart() == "" ? null : UtilDateTime.add00TimeString(codeGroupVo.getShDateStart()));
+		codeGroupVo.setShDateEnd(codeGroupVo.getShDateEnd() == null || codeGroupVo.getShDateEnd() == "" ? null : UtilDateTime.add59TimeString(codeGroupVo.getShDateEnd()));
+	
 		
 		
 		
+		// paging
+		codeGroupVo.setParamsPaging(codeGroupService.selectOneCount(codeGroupVo));
 		
-		model.addAttribute("list",codeGroupService.selectList(codeGroupVo));
-		//""안에 html에 넘겨줄 이름 = 변수명
-		
-//		System.out.println("codeGroups.size() : " + codeGroups.size());
+		if (codeGroupVo.getTotalRows() > 0) {
+			model.addAttribute("list", codeGroupService.selectList(codeGroupVo));
+			model.addAttribute("vo", codeGroupVo);
+		}	
+
 				
 		return "/xdm/v1/infra/codegroup/codeGroupXdmList";
 	}

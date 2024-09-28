@@ -5,6 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fruits.infra.codegroup.CodeGroupDto;
+import com.fruits.infra.codegroup.CodeGroupVo;
+
+import jakarta.annotation.PostConstruct;
+
 @Service
 public class CodeService {
 	
@@ -20,7 +25,7 @@ public class CodeService {
 	
 	//selectListCode
 	//code - codegroup 연결
-	public List<CodeDto> selectListCodeGroup(){
+	public List<CodeGroupDto> selectListCodeGroup(){
 //		List<CodeDto> codeGroups = codeDao.selectListCodeGroup();
 		return codeDao.selectListCodeGroup();
 	}
@@ -50,4 +55,9 @@ public class CodeService {
 		return codeDao.delete(codeDto);
 	}
 
+	@PostConstruct
+	public void selectListCachedCodeArrayList() {
+		System.out.println("selectListCachedCodeArrayList 함수 실행");
+	}
+	
 }

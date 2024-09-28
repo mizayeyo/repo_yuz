@@ -23,7 +23,6 @@ public class CodeDto {
 	private String ifcgName;
 	
 	
-//	----- getter/setter -----
 	
 	
 	public String getIfcdSeq() {

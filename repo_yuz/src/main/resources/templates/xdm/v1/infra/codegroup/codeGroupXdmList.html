@@ -540,38 +540,40 @@
             <div class="card card-2">
               <div class="card-body">
               <form name="form" method="post" action="/xdm/v1/infra/codegroup/codeGroupXdmList">
+              	<input type="hidden" name="thisPage" th:value="${vo.thisPage}" default="1" />
+              	<input type="hidden" id="rowNumToShow" name="rowNumToShow" th:value="${vo.rowNumToShow}" />
                 <div class="row g-3">
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
                     <select class="form-select" name="shDelNy" aria-label="Default select example">
-                      <option value="">삭제 여부</option>
-                      <option value="1">Y</option>
-                      <option value="0">N</option>
+                      <option value="" th:selected="${vo.shDelNy == null}">삭제 여부</option>
+                      <option value="1" th:selected="${vo.shDelNy == 1}">Y</option>
+                      <option value="0" th:selected="${vo.shDelNy == 0}">N</option>
                     </select>
                   </div>
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
                     <select class="form-select" name="shUseNy" aria-label="Default select example">
-                      <option value="">사용 여부</option>
-                      <option value="1">Y</option>
-                      <option value="0">N</option>
+                      <option value="" th:selected="${vo.shUseNy == null}">사용 여부</option>
+                      <option value="1" th:selected="${vo.shUseNy == 1}">Y</option>
+                      <option value="0" th:selected="${vo.shUseNy == 0}">N</option>
                     </select>
                   </div>
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
                     <select class="form-select" name="shOptionDate" aria-label="Default select example">
-                      <option value="">날짜선택</option>
-                      <option value="1">등록날짜</option>
-                      <option value="2">수정날짜</option>
+                      <option value="" th:selected="${vo.shOptionDate == null}">날짜선택</option>
+                      <option value="1" th:selected="${vo.shOptionDate == 1}">등록날짜</option>
+                      <option value="2" th:selected="${vo.shOptionDate == 2}">수정날짜</option>
                    </select>
                   </div>
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
-                    <input type="text" class="form-control" id="shDateStart" name="shDateStart" autocomplete="off">
+                    <input type="text" class="form-control" id="shDateStart"  name="shDateStart"  th:value="${#strings.substring(vo.shDateStart, 0, 10)}" autocomplete="off" placeholder="시작일">
                   </div>
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
-                    <input type="text" class="form-control" id="shDateEnd" name="shDateEnd" autocomplete="off">
+                    <input type="text" class="form-control" id="shDateEnd" name="shDateEnd" th:value="${#strings.substring(vo.shDateEnd, 0, 10)}" autocomplete="off" placeholder="종료일">
                   </div>
                   </div>
                   <div class="row g-3 mt-2">
@@ -594,10 +596,20 @@
                   </div>
                   <div class="row g-2 mt-3">
                     <div class="col-sm-10 p-2">
-                      <span>total: 171</span>
-                      </select>
+                      <a th:text="'Total: ' + ${vo.totalRows}"></a>
                     </div>
-                   
+                    <div class="col-md-10"></div>
+                    <div class="col-md-2">
+                    	<select class="form-select"
+                    		aria-label="Default select example" id="changeRowNum" name="changeRowNum">
+                    		<option value="5" th:selected="${vo.rowNumToShow eq 5}">5</option>
+                    		<option value="10" th:selected="${vo.rowNumToShow eq 10}">10</option>
+                    		<option value="30" th:selected="${vo.rowNumToShow eq 30}">30</option>
+                    		<option value="50" th:selected="${vo.rowNumToShow eq 50}">50</option>
+                    		<option value="80" th:selected="${vo.rowNumToShow eq 80}">80</option>
+                    		<option value="100" th:selected="${vo.rowNumToShow eq 100}">100</option>
+                    	</select>
+                    </div>
                     <table class="table">
                       <thead>
                       <th>
@@ -641,23 +653,29 @@
                        </tbody>
                     </table>
                     <!-- End Table with stripped rows -->
-                    <div align="center">
-                      <div class="col-sm-12 col-md-2 col-lg-2">
-                        <nav aria-label="Page navigation example">
-                          <ul class="pagination">
-                            <li class="page-item" style="align-items: center;">
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                              <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </nav>
-                      </div>
+                    
+                   <!--pagination start-->
+	<nav aria-label="Page navigation example">
+		<ul class="pagination justify-content-center">
+			<li class="page-item disabled" th:if="${vo.startPage gt vo.pageNumToShow}" style="cursor: pointer;">
+				<a class="page-link" aria-label="Previous" href="javascript:goList(${vo.startPage - 1})" 
+					th:attr="onclick=|goList('${vo.startPage - 1}')|"> 
+					<span aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<li class="page-item" th:each="num: ${#numbers.sequence(vo.startPage, vo.endPage)}" 
+    			th:classappend="${num eq vo.thisPage} ? active : ''" style="cursor: pointer;">
+			<a class="page-link" th:attr="onclick=|goList('${num}')|" th:text="${num}"></a>
+			</li>
+			<li class="page-item" th:if="${vo.endPage ne vo.totalPages}" style="cursor: pointer;">
+				<a class="page-link" aria-label="Next" th:attr="onclick=|goList('${vo.endPage + 1}')|"> 
+					<span aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+<!--pagination end-->
+
                     </div>
                    </form> 
                     <div class="row">
@@ -743,6 +761,23 @@
 	});
 });
   </script>
+  <script>
+<!--  paging -->
+goList = function(thisPage) {
+	document.querySelector("input[name=thisPage]").value = thisPage;
+	document.querySelector("form[name=form]").action = "/xdm/v1/infra/codegroup/codeGroupXdmList";
+	document.querySelector("form[name=form]").submit();
+}
+
+document.getElementById("changeRowNum").onchange = function () {
+    document.getElementById("rowNumToShow").value = document.getElementById("changeRowNum").value;
+    form.action = "/xdm/v1/infra/codegroup/codeGroupXdmList";
+    form.submit();
+
+}
+
+</script>
+
 
   <!-- Template Main JS File -->
   <script src="/xdm/v1/template/admin/assets/js/main.js"></script>

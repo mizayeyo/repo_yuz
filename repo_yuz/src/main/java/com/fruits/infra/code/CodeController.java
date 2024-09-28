@@ -5,7 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.fruits.infra.codegroup.CodeGroupDto;
+import com.fruits.infra.codegroup.CodeGroupVo;
 
 @Controller
 public class CodeController {
@@ -40,9 +44,6 @@ public class CodeController {
 	@RequestMapping(value="/xdm/v1/infra/code/codeXdmForm")
 	public String codeXdmForm(Model model) {
 		
-		//코드그룹 정보를 불러와야함
-		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
-		
 		//불러온 코드그룹 정보를 codeXdmForm에 전달해주어야함
 		model.addAttribute("listCodeGroup", codeService.selectListCodeGroup());
 		return "/xdm/v1/infra/code/codeXdmForm";
@@ -63,7 +64,7 @@ public class CodeController {
 			model.addAttribute("item", codeService.selectOne(codeDto));
 			
 			//코드그룹 정보를 불러와야함
-			List<CodeDto> codeGroups = codeService.selectListCodeGroup();
+			List<CodeGroupDto> codeGroups = codeService.selectListCodeGroup();
 			
 			//불러온 코드그룹 정보를 codeXdmForm.html에 전달함
              model.addAttribute("listCodeGroup", codeService.selectListCodeGroup()); 			
