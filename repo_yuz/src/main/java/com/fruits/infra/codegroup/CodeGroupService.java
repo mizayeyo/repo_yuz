@@ -1,9 +1,12 @@
 package com.fruits.infra.codegroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import jakarta.annotation.PostConstruct;
 
 @Service
 public class CodeGroupService {
@@ -74,9 +77,37 @@ public class CodeGroupService {
 		return codeGroupDao.selectOneCount(codeGroupVo);
 	}
 	
-
-}	
-
+	// for cache
+		@PostConstruct
+		public void selectListCachedCodeGroupArrayList() {
+			System.out.println("selectListCachedCodeGroupArrayList 함수 실행");
+			List<CodeGroupDto> codeGroupListFromDb = (ArrayList<CodeGroupDto>) codeGroupDao.selectListCachedCodeGroupArrayList();
+			CodeGroupDto.cachedCodeGroupArrayList.clear();
+			CodeGroupDto.cachedCodeGroupArrayList.addAll(codeGroupListFromDb);
+			System.out.println("cachedCodeGroupArrayList: " + CodeGroupDto.cachedCodeGroupArrayList.size() + "chached!!");
+		}
+	
+		//캐싱 삭제	
+		public static void clear() {
+		CodeGroupDto.cachedCodeGroupArrayList.clear();
+	}
+	
+		
+		// code의 정보를 받아서 문자열로 반환
+		public static String selectOneCachedCodeGroup(int codeGroup){
+			System.out.println("codeGroup: " + codeGroup);
+			String rt = "";
+			for(CodeGroupDto codeGroupRow : CodeGroupDto.cachedCodeGroupArrayList) {
+				if (codeGroupRow.getIfcgSeq().equals(Integer.toString(codeGroup))) {
+					rt = codeGroupRow.getIfcgName();
+				} else {
+					// by pass
+				}
+			}
+			return rt;
+		}
+	
+	}
 
 
 	

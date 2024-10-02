@@ -72,6 +72,10 @@
 		now(),
 		now()
 	)
+	<selectKey resultType="String" keyProperty="ifcgSeq" order="AFTER">
+				SELECT last_insert_id()
+</selectKey>
+
 	</insert>
 	
 	<select id="selectOne" resultMap="resultMapObj">
@@ -88,6 +92,7 @@
 			yuz.codegroup a
 		WHERE 1 = 1
 			AND a.ifcgSeq = #{ifcgSeq}	
+			
 	
 	</select>
 	
@@ -118,6 +123,18 @@
 	  			AND ifcgSeq = #{ifcgSeq}
 	  </delete>
 	  
-	  
+		  <!-- for cache -->
+	<select id="selectListCachedCodeGroupArrayList" resultMap="resultMapObj">
+		SELECT 
+			ifcgSeq,
+			ifcgName
+			
+		FROM
+			yuz.codegroup
+		WHERE 1=1
+			AND ifcgDelNy = 0
+		    AND ifcgUseNy = 1
+	</select>
+
 	  
 </mapper>

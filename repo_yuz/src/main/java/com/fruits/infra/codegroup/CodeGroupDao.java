@@ -34,6 +34,8 @@ public interface CodeGroupDao {
 	public int selectOneCount(CodeGroupVo codeGroupVo);
 
 	
-
+	// for cache
+	public List<CodeGroupDto> selectListCachedCodeGroupArrayList();
+	
 
 }
