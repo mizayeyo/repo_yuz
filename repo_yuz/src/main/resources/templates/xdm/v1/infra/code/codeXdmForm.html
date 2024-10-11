@@ -538,12 +538,13 @@
                   <input type="text" class="form-control" id="validationCustom01" name="ifcdSeq" placeholder="자동생성" style="background-color:lightgray;" disabled>
                 </div>
                  <div class="col-sm-12 col-md-6 col-lg-3">
-                    <label for="validationCustom01" class="form-label mb-0">코드그룹 번호 <font color="red"><strong>*</strong></font></label>
-                    <select class="form-select" id="ifcgSeq" name="ifcgSeq"
+                    <label class="form-label mb-0">코드그룹 번호 <font color="red"><strong>*</strong></font></label>
+                    <select class="form-select"  name="codegroup_ifcgSeq"
                     	style="padding: .375rem .75rem;">
                                 <option value="">코드 그룹 번호</option>
-                                <option th:each = "list:${listCodeGroup}"
-                                        th:value = "${list.ifcgSeq}" th:text="${list.ifcgName}">
+                                <option th:each = "list : ${listCodeGroup}"
+                                        th:value ="${list.ifcgSeq}" 
+                                        th:text="${list.ifcgName}">
                                 </option>
                               </select>
                    		</div>

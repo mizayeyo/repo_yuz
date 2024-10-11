@@ -12,10 +12,10 @@ public interface CodeDao {
 	
 	//추상메소드
 	//selectList
-	public List<CodeDto> selectList();
+	public List<CodeDto> selectList(CodeVo codeVo);
 	
 	//selectListCodeGroup
-	public List<CodeGroupDto> selectListCodeGroup();
+	public List<CodeDto> selectListCodeGroup();
 	
 	//insert
 	public int insert(CodeDto codeDto);
@@ -31,6 +31,8 @@ public interface CodeDao {
 	
 	//delete
 	public int delete(CodeDto codeDto);
+	
+	
 	
 
 }

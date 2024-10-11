@@ -17,15 +17,15 @@ public class CodeService {
 	 private CodeDao codeDao;
 	
 	//selectList
-	public List<CodeDto> selectList(){
-		return codeDao.selectList();
+	public List<CodeDto> selectList(CodeVo codeVo){
+		return codeDao.selectList(codeVo);
 			
 	}
 	
 	
 	//selectListCode
 	//code - codegroup 연결
-	public List<CodeGroupDto> selectListCodeGroup(){
+	public List<CodeDto> selectListCodeGroup(){
 //		List<CodeDto> codeGroups = codeDao.selectListCodeGroup();
 		return codeDao.selectListCodeGroup();
 	}
@@ -54,6 +54,8 @@ public class CodeService {
 	public int delete(CodeDto codeDto) {
 		return codeDao.delete(codeDto);
 	}
+	
+	
 
 	@PostConstruct
 	public void selectListCachedCodeArrayList() {

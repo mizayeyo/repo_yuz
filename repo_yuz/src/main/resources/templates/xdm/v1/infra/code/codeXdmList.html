@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="utf-8">
@@ -30,6 +30,11 @@
 
   <!-- Template Main CSS File -->
   <link href="/xdm/v1/template/admin/assets/css/style.css" rel="stylesheet">
+  
+  <!-- by developer -->
+<link rel="stylesheet" href="/xdm/v1/css/datetimepicker/jquery.datetimepicker.min.css" />
+
+  
 
   <style>
     .card-1 {
@@ -536,50 +541,56 @@
           <div class="col">
             <div class="card card-2">
               <div class="card-body">
-                <form class="row g-3">
+                <form name="form" class="row g-3" method="post" action="/xdm/v1/infra/code/codeXdmList" >
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
-                    <select class="form-select" id="code_group">
-                      <option value="1">N</option>
-                      <option value="2">Y</option>
+                    <select class="form-select" name="shDelNy"
+                    	aria-label="Default select example">
+                    	<option value="">삭제여부</option>
+                        <option value="1">Y</option>
+                        <option value="0">N</option>
                     </select>
                   </div>
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
-                    <select class="form-select" id="code_group">
-                      <option value="1">N</option>
-                      <option value="2">Y</option>
+                    <select class="form-select" name="shUseNy"
+                      aria-label="Default select example">
+                      <option value="">사용여부</option>
+                      <option value="1">Y</option>
+                      <option value="0">N</option>
                     </select>
                   </div>
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
-                    <select class="form-select" id="code_group">
-                      <option value="1">수정일</option>
-                      <option value="2">작성일</option>
+                    <select class="form-select" name="shOptionDate"
+                       aria-label="Default select example">
+                       <option value="">날짜 선택</option>
+                      <option value="1">등록날짜</option>
+                      <option value="2">수정날짜</option>
                     </select>
                   </div>
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
-                    <input type="date" class="form-control" id="code_name_eng">
+                    <input type="text" class="form-control" id="shDateStart" name="shDateStart" autocomplete="off" placeholder="시작일">
                   </div>
                   <div class="col-sm-12 col-md-2 col-lg-2">
                     <br>
-                    <input type="date" class="form-control" id="code_name_eng">
+                    <input type="text" class="form-control" id="shDateStart" name="shDateEnd" autocomplete="off" placeholder="종료일">
                   </div>
                   <div class="row g-3">
                     <div class="col-sm-12 col-md-2 col-lg-2">
-                      <select class="form-select" id="code_group">
-                        <option selected="">검색구분</option>
-                        <option value="1">옵션1</option>
-                        <option value="2">옵션2</option>
-                        <option value="3">옵션3</option>
+                      <select class="form-select" name="shOption"
+                         aria-label="Default select example">
+                        <option value="">검색구분</option>
+                        <option value="1">코드그룹코드</option>
+                        <option value="2">코드그룹이름</option>
                       </select>
                     </div>
                     <div class="col-sm-12 col-md-2 col-lg-2">
-                      <input type="search" class="form-control" id="code_name_eng" placeholder="검색어">
+                      <input type="text" class="form-control" name="shValue" placeholder="검색어">
                     </div>
                     <div class="col-sm-2 col-md-2 col-lg-2">
-                      <button type="button" class="btn btn-outline-dark"><i class="bi bi-search"></i></button>
+                      <button type="submit" class="btn btn-outline-dark"><i class="bi bi-search"></i></button>
                       <button type="button" class="btn btn-outline-dark"><i class="bi bi-arrow-clockwise"></i></button>
                     </div>
                   </div>
@@ -660,6 +671,7 @@
                         </nav>
                       </div>
                     </div>
+                    </form>
                     <div class="row">
 					  <div class="col-6">
 					    <a href="" class="btn btn-danger"><i class="bi bi-x-lg"></i></a>
@@ -726,6 +738,25 @@
   <script src="/xdm/v1/template/admin/assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="/xdm/v1/template/admin/assets/vendor/php-email-form/validate.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+ <!-- by developer -->	
+ <script src="/xdm/v1/js/datetimepicker/jquery-3.7.1.min.js"></script>
+ <script src="/xdm/v1/js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+ 
+ <script type="text/javascript">
+ window.addEventListener('load', function(){ // 브라우저에서 페이지가 완전히 로드되었을 때 실행되는 코드
+		
+	$.datetimepicker.setLocale('ko'); // datetimepicker의 로케일을 한국어를 쓰겠다는 뜻이다.
+	
+	$("#shDateStart, #shDateEnd").datetimepicker({ // jquery의 datetimepicker 플러그인을 사용하여 id가 shDateStart, shDateEnd인 두 개의 날짜 입력 필드 요소 대해 datetimepicker를 활성화
+		timepicker:false, // 시간 선택을 비활성화
+		format:'Y-m-d'   // 날짜 형식을 'Y-m-d'로 설정
+	});
+});
+
+ </script>
+  
+  
   <script>
     $(document).ready(function () {
       var postCount = $('#postList tr').length;

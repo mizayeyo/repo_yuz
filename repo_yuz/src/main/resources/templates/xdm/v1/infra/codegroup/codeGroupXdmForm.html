@@ -531,16 +531,17 @@
           <div class="card card-1 " >
             <div class="card-body border">
               <h5 class="card-title">기본정보</h5>
-        <form name="form" class="row g-3" method="post" action="/xdm/v1/infra/codegroup/codeGroupXdmInst">
+        <form name="form" class="row g-3 needs-validation" method="post" action="/xdm/v1/infra/codegroup/codeGroupXdmInst" novalidate>
           <div class="row g-2">
                 <div class="col-sm-12 col-md-6 col-lg-3">
                   <label for="code" class="form-label mb-0">코드그룹 번호 <font color="red"><strong>*</strong></font></label>
-                  <input type="text" class="form-control" id="validationCustom01" name="ifcgSeq" placeholder="자동생성" style="background-color:lightgray;" disabled>
+                  <input type="text" class="form-control" id="ifcgSeq" name="ifcgSeq" placeholder="자동생성" style="background-color:lightgray;" disabled>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
-                  <label for="calidationCustom01" class="form-label mb-0">코드그룹 이름</label>
-                  <input type="text" class="form-control" id="validationCustom01" name="ifcgName" placeholder="코드그룹 이름" required>
-                  <div class="invalid-feedback">코드그룹 이름을 입력해주세요.</div>
+                  <label class="form-label mb-0">코드그룹 이름</label>
+                  <input type="text" class="form-control"  name="ifcgName" id="ifcgName" placeholder="코드그룹 이름" required>
+                  <div class="invalid-feedback" id="ifcgNameFeedback">코드그룹이름을 입력해 주세요.</div>
+                  <div class="invalid-feedback" id="ifcgNameRegExpFeedback">코드그룹이름은 한글, 영대소문자, 숫자만 입력해 주세요.</div>
                 </div>
                 </div>
                 <div class="row g-2">
@@ -548,7 +549,7 @@
                 <div class="row g-2">
                   <div class="col-sm-12 col-md-6 col-lg-3">
                     <label for="validationCustom01" class="form-label mb-0">사용여부 <font color="red"><strong>*</strong></font></label>
-                    <select class="form-select" id="validationCustom04" name="ifcgUseNy" required>
+                    <select class="form-select" id="ifcgUseNy" name="ifcgUseNy" required>
                                 <option selected disable value="">사용여부</option>
                                 <option value="1">Y</option>
                                 <option value="0">N</option>
@@ -557,7 +558,7 @@
                   </div>
                   <div class="col-sm-12 col-md-6 col-lg-3">
                     <label for="validationCustom01" class="form-label mb-0">순서<font color="red"><strong>*</strong></font></label>
-                    <select class="form-select" id="validationCustom04" name="ifcgOrder" required>
+                    <select class="form-select" id="ifcgOrder" name="ifcgOrder" required>
                                 <option selected disable value="">순서</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -577,7 +578,7 @@
                   <div class="row g-2">
                     <div class="col-sm-6 col-md-6 col-lg-6">
                       <label for="validationCustom01" class="form-label mb-0">설명</label>
-                      <textarea class="form-control" id="validationCustom01" name="icfgDesc" rows="3"></textarea>
+                      <textarea class="form-control" id="ifcgDesc" name="icfgDesc" rows="3"></textarea>
                     </div>
                     </div>
                     <div class="row g-2">
@@ -610,8 +611,8 @@
 						  </div>
 						  <div class="col d-flex justify-content-end">
 						   
-						    <button type="submit" class="btn btn-primary">
-						      <i class="bi bi-check-lg"></i>
+						    <button type="button" id="btnSubmit" class="btn btn-primary">
+						      <i class="bi bi-server"></i>
 						    </a>
 						    </button>
 						  </div>
@@ -655,6 +656,100 @@
 
   <!-- Template Main JS File -->
   <script src="/xdm/v1/template/admin/assets/js/main.js"></script>
+  
+  
+  <!--  by developers -->
+  <script>
+  
+	// validation
+	document.getElementById("btnSubmit").onclick = function () {
+	
+		//ifcgName
+	    var ifcgName = document.getElementById("ifcgName");						// 객체를 만들고
+	    var ifcgNameValue = document.getElementById("ifcgName").value.trim();	// 객체의 값을 받는 객체 생성
+		var ifcgNameRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+	    var ifcgNameFeedback = document.getElementById("ifcgNameFeedback");
+	    var ifcgNameRegExpFeedback = document.getElementById("ifcgNameRegExpFeedback");
+		 	   
+	
+	// 기존의 validation 초기화
+	
+		ifcgName.classList.remove('is-valid', 'is-invalid');
+		ifcgNameFeedback.style.display='none';
+		ifcgNameRegExpFeedback.style.display='none';
+
+		
+	   if(ifcgNameValue =="" || ifcgNameValue == null){
+		   ifcgNameFeedback.style.display='block';
+		   ifcgName.classList.add('is-invalid');
+		   ifcgName.focus();
+		   return false;
+	   } else {
+		   
+	   }
+	   if(!ifcgNameRegExp.test(ifcgNameValue)){
+		   ifcgNameRegExpFeedback.style.display='block';
+		   ifcgName.classList.add('is-invalid');
+		   ifcgName.focus();
+		   return false;
+	   } else{
+		   //by pass
+		   ifcgName.classList.add('is-valid');
+	   }
+	
+	
+	// ifcgUseNy
+	var ifcgUseNy = document.getElementById("ifcgUseNy");
+	var ifcgUseNyValue = document.getElementById("ifcgUseNy").value.trim();
+	
+	if(ifcgUseNyValue == "" || ifcgUseNyValue == null){ //선택 안했을 경우
+		ifcgUseNy.classList.add('is-invalid');//유효성 검사 실패 처리 - 빨간테두리
+		ifcgUseNy.focus();
+		return false;
+	}else{
+	//by pass
+		ifcgUseNy.classList.remove('is-invalid');  //빨간테두리 삭제
+		ifcgUseNy.classList.add('is-valid');     //유효성 검사 성공 처리 - 초록테두리
+	}
+	
+	//ifcgOrder
+	var ifcgOrder = document.getElementById("ifcgOrder");
+	var ifcgOrderValue = document.getElementById("ifcgOrder").value.trim();
+	
+	if(ifcgOrderValue == "" || ifcgOrderValue == null){ //선택 안했을 경우
+		ifcgOrder.classList.add('is-invalid');//유효성 검사 실패 처리 - 빨간테두리
+		ifcgOrder.focus();
+		return false;
+	}else{
+	//by pass
+		ifcgOrder.classList.remove('is-invalid');  //빨간테두리 삭제
+		ifcgOrder.classList.add('is-valid');     //유효성 검사 성공 처리 - 초록테두리
+	}
+	
+	
+		form.action = "/xdm/v1/infra/codegroup/codeGroupXdmInst";
+		form.submit();
+		
+	}
+
+	// validation check
+	
+var needsValidation = document.querySelectorAll('.needs-validation')
+
+Array.prototype.slice.call(needsValidation)
+.forEach(function(form) {
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault() // 폼 제출 방지
+            event.stopPropagation() // 이벤트 전파 방지
+        }
+        
+        form.classList.add('was-validated') // 유효성 검사 클래스 추가
+    }, false)
+})
+
+  
+  </script>
 
 </body>
 

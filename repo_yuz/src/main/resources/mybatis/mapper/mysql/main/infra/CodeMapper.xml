@@ -16,11 +16,24 @@
 		    b.ifcdRegist,
 		    b.ifcdEdit,
 		    b.codegroup_ifcgSeq,
-		    a.ifcgName
+		    a.ifcgName,
+		     (SELECT COUNT(ifcdSeq) FROM yuz.code AS b WHERE b.codegroup_ifcgSeq = b.codegroup_ifcgSeq) AS xifcdSeqCount
 		FROM 
 			yuz.code AS b
 			JOIN codegroup AS a
-				ON a.ifcgSEq = b.codegroup_ifcgSeq
+				ON a.ifcgSeq = b.codegroup_ifcgSeq
+		WHERE 1 = 1
+			<if test="shDelNy != null and !shDelNy.equals('')">AND ifcdDelNy = #{shDelNy}</if>
+			<if test="shUseNy != null and !shUseNy.equals('')">AND ifcdUseNy = #{shUseNy}</if>
+			<choose>
+				<when test="shOption == 1">AND ifcgSeq = #{shValue}</when>
+				<when test="shOption == 2">AND ifcgName LIKE CONCAT('%',#{shValue},'%')</when>
+			</choose>
+			<choose>
+				<when test="shOptionDate == 1">AND b.ifcdRegist BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+				<when test="shOptionDate == 2">AND b.ifcdEdit BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+			</choose>
+
 		ORDER BY
 			b.ifcdSeq desc
 	</select>
@@ -113,5 +126,7 @@
 			AND ifcdSeq = #{ifcdSeq}
 	</delete>
 </mapper>
+
+
 
 
