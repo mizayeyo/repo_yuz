@@ -1,6 +1,8 @@
 package com.fruits.infra.code;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -24,6 +26,9 @@ public class CodeDto {
 	
 	//count추가
 	private Integer xifcdSeqCount;
+	
+	//for cache
+	public static List<CodeDto> cachedCodeArrayList = new ArrayList<CodeDto>();
 	
 	
 	//------getter / setter --------

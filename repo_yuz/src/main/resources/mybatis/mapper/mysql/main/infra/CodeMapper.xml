@@ -5,19 +5,7 @@
 
 	<resultMap type="com.fruits.infra.code.CodeDto" id="resultMapObj"></resultMap>
 	
-	<select id="selectList" resultMap="resultMapObj">
-		SELECT
-			b.ifcdSeq,
-			b.ifcdName,
-			b.ifcdUseNy,
-			b.ifcdOrder,
-			b.ifcdDesc,
-		    b.ifcdDelNy,
-		    b.ifcdRegist,
-		    b.ifcdEdit,
-		    b.codegroup_ifcgSeq,
-		    a.ifcgName,
-		     (SELECT COUNT(ifcdSeq) FROM yuz.code AS b WHERE b.codegroup_ifcgSeq = b.codegroup_ifcgSeq) AS xifcdSeqCount
+	<sql id="selectCommon">
 		FROM 
 			yuz.code AS b
 			JOIN codegroup AS a
@@ -34,10 +22,31 @@
 				<when test="shOptionDate == 2">AND b.ifcdEdit BETWEEN #{shDateStart} AND #{shDateEnd}</when>
 			</choose>
 
-		ORDER BY
-			b.ifcdSeq desc
-	</select>
+	</sql>
+	<select id="selectOneCount">
+		SELECT COUNT(*)
+		<include refid="selectCommon"/>
 	
+	</select>
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM(
+		SELECT
+			b.ifcdSeq,
+			b.ifcdName,
+			b.ifcdUseNy,
+			b.ifcdOrder,
+			b.ifcdDesc,
+		    b.ifcdDelNy,
+		    b.ifcdRegist,
+		    b.ifcdEdit,
+		    b.codegroup_ifcgSeq,
+		    a.ifcgName,
+		     (SELECT COUNT(ifcdSeq) FROM yuz.code AS b WHERE b.ifcdSeq = b.ifcdSeq) AS xifcdSeqCount
+			<include refid="selectCommon"/>
+			ORDER BY
+				b.ifcdSeq DESC
+		) aa limit #{rowNumToShow} offset #{startRnumForMysql}	
+	</select>
 <!-- //code에 codegroup 연결 -->
 	<select id="selectListCodeGroup" resultMap="resultMapObj">
 		SELECT
@@ -74,6 +83,9 @@
 		now(),
 		#{codegroup_ifcgSeq}
 		)
+<!-- 		<selectKey resultType="String" KeyProperty="ifcdSeq" order="AFTER"> -->
+<!-- 			SELECT last_insert_id() -->
+<!-- 		</selectKey> -->
 	</insert>
 	
 <!-- //	테이터 한개 출력(select) -->
@@ -125,8 +137,20 @@
 		WHERE 1 = 1
 			AND ifcdSeq = #{ifcdSeq}
 	</delete>
+
+
+
+		<!-- for cache -->
+		<select id="selectListCachedCodeArrayList" resultMap="resultMapObj">
+			SELECT 
+				ifcdSeq,
+				ifcdName,
+				codegroup_ifcgSeq
+			FROM
+				yuz.code
+			WHERE 1=1
+				AND ifcdDelNy = 0
+			    AND ifcdUseNy = 1
+		</select>
+
 </mapper>
-
-
-
-

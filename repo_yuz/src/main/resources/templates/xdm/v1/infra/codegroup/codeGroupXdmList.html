@@ -679,32 +679,15 @@
                     </div>
                    </form> 
                     <div class="row">
-					  <div class="col-6">
-					    <a href="" class="btn btn-danger"><i class="bi bi-x-lg"></i></a>
-					    <a href="#">
-					    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#verticalycentered"><i class="bi bi-archive-fill">
+					  <div class="col">
+					    <button type="button" class="btn btn-danger" id="btnDelete">
+					    <i class="bi bi-x-lg icon_color_change"></i>
+					    </button>
+					    <button type="button" class="btn btn-danger" id="btnUelete">
+					    <i class="bi bi-archive-fill">
 					    </i>
 					    </button>
-					    </a>
-					    <div class="modal fade" id="verticalycentered" tabindex="-1">
-					   	<div class="modal-dialog modal-dialog-centered">
-					   	<div class="modal-content">
-					   	 <div class="modal-header">
-                      <h5 class="modal-title">삭제버튼 눌렀을 때 나오는 모달창 제목</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                     모달창 안에 내용
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                      <button type="button" class="btn btn-primary">확인</button>
-                    </div>
-					   	</div>
-					   	</div>
-					   </div>
-					  
-						  </div>
+					    </div>
 						  <div class="col-6 d-flex justify-content-end">
 						    <a href="#" class="btn btn-success">
 						      <i class="bi bi-file-earmark-check"></i>
@@ -777,6 +760,24 @@ document.getElementById("changeRowNum").onchange = function () {
 }
 
 </script>
+
+    <script>
+  //uelete
+  	document.getElementById("btnUelete").onclick = function(){
+  		alert("UELETE 확인");
+  		let form = document.querySelector("form[name=form]");
+  		form.action = "/xdm/v1/infra/codegroup/codeGroupXdmUelete"
+  		form.submit();
+  	}	
+  //delete
+	  document.getElementById("btnDelete").onclick = function(){
+	  		alert("DELETE 확인");
+	  		let form = document.querySelector("form[name=form]");
+	  		form.action = "/xdm/v1/infra/codegroup/codeGroupXdmDelete"
+	  		form.submit();
+	  	}	
+  	
+  </script>
 
 
   <!-- Template Main JS File -->
