@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="utf-8">
@@ -556,20 +556,21 @@
                               </select>
                            <div class="invalid-feedback">사용여부를 선택해주세요.</div>
                   </div>
-                  <div class="col-sm-12 col-md-6 col-lg-3">
-                    <label class="form-label mb-0">순서<font color="red"><strong>*</strong></font></label>
+                   <div class="col-sm-12 col-md-6 col-lg-3">
+                    <label for="validationCustom01" class="form-label mb-0">순서<font color="red"><strong>*</strong></font></label>
                     <select class="form-select" id="ifcgOrder" name="ifcgOrder" required>
                                 <option selected disable value="">순서</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
+                                <option value="1" th:selected="${item?.ifcgOrder == 1}">1</option>
+                                <option value="2" th:selected="${item?.ifcgOrder == 2}">2</option>
+                                <option value="3" th:selected="${item?.ifcgOrder == 3}">3</option>
+                                <option value="4" th:selected="${item?.ifcgOrder == 4}">4</option>
+                                <option value="5" th:selected="${item?.ifcgOrder == 5}">5</option>
+                                <option value="6" th:selected="${item?.ifcgOrder == 6}">6</option>
+                                <option value="7" th:selected="${item?.ifcgOrder == 7}">7</option>
+                                <option value="8" th:selected="${item?.ifcgOrder == 8}">8</option>
+                                <option value="9" th:selected="${item?.ifcgOrder == 9}">9</option>
+                                <option value="10" th:selected="${item?.ifcgOrder == 10}">10</option>
+                        
                         </select>
                         <div class="invalid-feedback">순서를 선택해주세요</div>
                   </div>
