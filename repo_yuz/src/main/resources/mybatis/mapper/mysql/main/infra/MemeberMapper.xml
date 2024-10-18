@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fruits.infra.member.MemberDao"> 
+
+	<resultMap type="com.fruits.infra.member.MemberDto" id="resultMapObj"></resultMap>
+		<select id="selectList" resultMap="resultMapObj">		
+			SELECT 
+				a.ifmmSeq,
+			    a.ifmmName,
+			    a.ifmmId,
+			    a.ifmmPassword,
+			    a.ifmmNickName,
+			    a.ifmmBirthday,
+			    a.ifmmDefaulNy,
+			    a.ifmmRegistDate,
+			    a.ifmmDeleteDate,
+			    a.ifmmDelNy,
+			    a.ifmmEmail,
+			    a.ifmmGender,
+			    a.ifmmAddress1,
+			    a.ifmmAddress2,
+			    a.ifmmPostCode,
+			    a.ifmmTel,
+			    a.ifmmMemo
+			FROM 
+				yuz.member a
+			ORDER BY
+				a.ifmmSeq desc
+</select>				
+
+</mapper>	
