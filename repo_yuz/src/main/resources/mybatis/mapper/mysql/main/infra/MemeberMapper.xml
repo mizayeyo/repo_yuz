@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.fruits.infra.member.MemberDao"> 
+<!-- xml에서 주석 단축키 : ctrl + shift + c -->
+<!-- namepace : mapper와 연결될 dao -->
 
+<mapper namespace="com.fruits.infra.member.MemberDao">
+
+	<!-- 객체와 바인딩 시켜줄 Dto -->
 	<resultMap type="com.fruits.infra.member.MemberDto" id="resultMapObj"></resultMap>
-		<select id="selectList" resultMap="resultMapObj">		
-			SELECT 
+	
+	<sql id="selectCommon">
+	FROM 
+		yuz.member a
+	WHERE 1 = 1
+		<!--삭제여부 -->
+		<if test="shDelNy !=null and !shDelNy.equals('')">AND ifmmDelNy = #{shDelNy}</if>
+		<!--사용여부 -->
+<!-- 		<if test="shUseNy !=null and !shUseNy.equals('')">AND ifmmUseNy = #{shUseNy}</if> -->
+		<!--날짜 검색 -->
+		<choose>
+			<when test="shOptionDate == 1">AND a.ifmmRegistDate BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+			<when test="shOptionDate == 2">AND a.ifmmDeleteDate BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+		</choose>
+
+		<!--조건&검색어 검색 -->
+		<choose>
+			<when test="shOption == 1">AND ifmmSeq = #{shValue}</when>
+			<when test="shOption == 2">AND ifmmName LIKE CONCAT('%', #{shValue},'%')</when>
+		</choose>	
+	</sql>	
+	
+	<select id="selectOneCount">
+		SELECT COUNT(*)
+		<include refid="selectCommon"/>
+	</select>
+	
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM(
+			SELECT
 				a.ifmmSeq,
 			    a.ifmmName,
 			    a.ifmmId,
@@ -22,11 +54,129 @@
 			    a.ifmmAddress2,
 			    a.ifmmPostCode,
 			    a.ifmmTel,
-			    a.ifmmMemo
-			FROM 
-				yuz.member a
-			ORDER BY
-				a.ifmmSeq desc
-</select>				
+			    a.ifmmMemo,
 
-</mapper>	
+				(SELECT count(ifmmSeq) FROM member AS b WHERE 1 = 1 ANd a.ifmmSeq = a.ifmmSeq) AS xifmmSeqCount
+				<include refid="selectCommon"/>
+			ORDER BY
+				a.ifmmSeq DESC
+		)aa limit #{rowNumToShow} offset #{startRnumForMysql}
+	
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO member(
+				
+			    a.ifmmName,
+			    a.ifmmId,
+			    a.ifmmPassword,
+			    a.ifmmNickName,
+			    a.ifmmBirthday,
+			    a.ifmmDelNy,
+			    a.ifmmEmail,
+			    a.ifmmGender,
+			    a.ifmmAddress1,
+			    a.ifmmAddress2,
+			    a.ifmmPostCode,
+			    a.ifmmTel,
+			    a.ifmmMemo
+			    a.ifmmRegistDate,
+			    a.ifmmDeleteDate
+		)VALUES(
+		#{ifmmgName},
+		#{ifmmId},
+		#{ifmmPassword},
+		#{ifmmNickName},
+		#{ifmmBirthday},
+		#{ifmmDelNy},
+		#{ifmmEmail},
+		#{ifmmGender},
+		#{ifmmAddress1},
+		#{ifmmAddress2},
+		#{ifmmPostCode},
+		#{ifmmTel},
+		#{ifmmMemo},
+		now(),
+		now()
+	)
+	<selectKey resultType="String" keyProperty="ifmmSeq" order="AFTER">
+				SELECT last_insert_id()
+</selectKey>
+
+	</insert>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+				a.ifmmName,
+			    a.ifmmId,
+			    a.ifmmPassword,
+			    a.ifmmNickName,
+			    a.ifmmBirthday,
+			    a.ifmmDelNy,
+			    a.ifmmEmail,
+			    a.ifmmGender,
+			    a.ifmmAddress1,
+			    a.ifmmAddress2,
+			    a.ifmmPostCode,
+			    a.ifmmTel,
+			    a.ifmmMemo
+			    a.ifmmRegistDate,
+			    a.ifmmDeleteDate
+		FROM
+			yuz.member a
+		WHERE 1 = 1
+			AND a.ifmmSeq = #{ifmmSeq}	
+			
+	
+	</select>
+	
+	<update id="update">
+		UPDATE yuz.member
+		SET
+				ifmmName = #{ifmmName},
+			    ifmmId = #{ifmmId},
+			    ifmmPassword =  #{ifmmPassword},
+			    ifmmNickName = #{ifmmNickanme},
+			    ifmmBirthday = #{ifmmBirthday},
+			    ifmmDelNy = #{ifmmDelNy},
+			    ifmmEmail = #{ifmmEmail},
+			    ifmmGender = #{ifmmGender}, 
+			    ifmmAddress1 = #{ifmmAddress1},
+			    ifmmAddress2 = #{ifmmAddress2},
+			    ifmmPostCode = #{ifmmPostCode},
+			    ifmmTel = #{ifmmTel},
+			    ifmmMemo = #{ifmmMemo}
+		WHERE 1 = 1
+			AND ifmmSeq = #{ifmmSeq}	
+	</update>
+	
+	  <update id="uelete">
+	  		UPDATE yuz.member
+	  		SET
+	  			ifmmDelNy = 1
+	  		WHERE 1 = 1
+	  			AND ifmmSeq = #{ifmmSeq}	
+	  
+	  </update>
+	  
+	  <delete id="delete">
+	  		DELETE FROM yuz.member
+	  		WHERE 1=1
+	  			AND ifmmSeq = #{ifmmSeq}
+	  </delete>
+	  
+		  <!-- for cache -->
+	<select id="selectListCachedMemberArrayList" resultMap="resultMapObj">
+		SELECT 
+			ifmmSeq,
+			ifmmName
+			
+		FROM
+			yuz.member
+		WHERE 1=1
+			 AND ifmmDelNy IN (0, 1) 
+		   
+	</select>
+
+	  
+</mapper>
