@@ -56,7 +56,7 @@
 			    a.ifmmTel,
 			    a.ifmmMemo,
 
-				(SELECT count(ifmmSeq) FROM member AS b WHERE 1 = 1 ANd a.ifmmSeq = a.ifmmSeq) AS xifmmSeqCount
+				(SELECT count(ifmmSeq) FROM member AS a WHERE 1 = 1 ANd a.ifmmSeq = a.ifmmSeq) AS xifmmSeqCount
 				<include refid="selectCommon"/>
 			ORDER BY
 				a.ifmmSeq DESC
@@ -67,23 +67,23 @@
 	<insert id="insert">
 		INSERT INTO member(
 				
-			    a.ifmmName,
-			    a.ifmmId,
-			    a.ifmmPassword,
-			    a.ifmmNickName,
-			    a.ifmmBirthday,
-			    a.ifmmDelNy,
-			    a.ifmmEmail,
-			    a.ifmmGender,
-			    a.ifmmAddress1,
-			    a.ifmmAddress2,
-			    a.ifmmPostCode,
-			    a.ifmmTel,
-			    a.ifmmMemo
-			    a.ifmmRegistDate,
-			    a.ifmmDeleteDate
+			    ifmmName,
+			    ifmmId,
+			    ifmmPassword,
+			    ifmmNickName,
+			    ifmmBirthday,
+			    ifmmDelNy,
+			    ifmmEmail,
+			    ifmmGender,
+			    ifmmAddress1,
+			    ifmmAddress2,
+			    ifmmPostCode,
+			    ifmmTel,
+			    ifmmMemo,
+			    ifmmRegistDate,
+			    ifmmDeleteDate
 		)VALUES(
-		#{ifmmgName},
+		#{ifmmName},
 		#{ifmmId},
 		#{ifmmPassword},
 		#{ifmmNickName},

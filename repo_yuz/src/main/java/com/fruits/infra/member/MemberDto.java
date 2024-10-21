@@ -13,6 +13,7 @@ public class MemberDto {
 	private String ifmmId;
 	private String ifmmPassword;
 	private String ifmmNickName;
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date ifmmBirthday;
 	@DateTimeFormat(pattern="yyyy-MM-dd hh:mm:ss")
 	private Date ifmmRegistDate;

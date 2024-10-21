@@ -20,9 +20,7 @@ public class MemberService {
 //		
 //	}
 
-	public List<MemberDto> selectList(){
-		return memberDao.selectList();
-	}
+
 	
 	
 	//함수 안에 내용이 없을 경우 아래와 같이 줄여서 쓴다.
