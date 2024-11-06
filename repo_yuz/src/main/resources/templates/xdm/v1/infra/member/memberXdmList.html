@@ -617,11 +617,9 @@
 														th:text="${vo.totalRows - ((vo.thisPage - 1) * vo.rowNumToShow + listStat.index)}"></td>
 													<td th:text="${list.ifmmSeq}"></td>
 													<td><a
-														th:href="@{/xdm/v1/infra/member/memberXdmMfom(ifcgSeq=${list.ifmmSeq})}"
-														th:text="${list.ifmmName}"></a></td>
-													<td><a
 														th:href="@{/xdm/v1/infra/member/memberXdmMfom(ifmmSeq=${list.ifmmSeq})}"
-														th:text="${list.ifmmId}"></a></td>
+														th:text="${list.ifmmName}"></a></td>
+													<td th:text="${list.ifmmId}"></td>
 													<td th:text="${list.ifmmPassword}"></td>
 													<td th:text="${list.ifmmNickName}"></td>
 													<td

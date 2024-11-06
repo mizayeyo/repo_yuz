@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- xml에서 주석 단축키 : ctrl + shift + c -->
+<!-- namepace : mapper와 연결될 dao -->
+
+<mapper namespace="com.fruits.infra.product.ProductDao">
+
+	<!-- 객체와 바인딩 시켜줄 Dto -->
+	<resultMap type="com.fruits.infra.product.ProductDto" id="resultMapObj"></resultMap>
+	
+	<sql id="selectCommon">
+	FROM 
+		yuz.product a
+	WHERE 1 = 1
+		<!--삭제여부 -->
+		<if test="shDelNy !=null and !shDelNy.equals('')">AND ifpdDelNy = #{shDelNy}</if>
+		<!--사용여부 -->
+		<if test="shUseNy !=null and !shUseNy.equals('')">AND ifpdUseNy = #{shUseNy}</if>
+		<!--날짜 검색 -->
+		<choose>
+			<when test="shOptionDate == 1">AND a.ifpdRegist BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+			<when test="shOptionDate == 2">AND a.ifpdEdit BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+		</choose>
+
+		<!--조건&검색어 검색 -->
+		<choose>
+			<when test="shOption == 1">AND ifpdSeq = #{shValue}</when>
+			<when test="shOption == 2">AND ifpdName LIKE CONCAT('%', #{shValue},'%')</when>
+		</choose>	
+	</sql>	
+	
+	<select id="selectOneCount">
+		SELECT COUNT(*)
+		<include refid="selectCommon"/>
+	</select>
+	
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM(
+			SELECT
+				a.ifpdSeq,
+				a.ifpdName,
+				a.ifpdUseNy,
+				a.ifpdDesc,
+				a.ifpdDelNy,
+				a.ifpdReg,
+				a.ifpdUpdate,
+				(SELECT count(ifpdSeq) FROM product WHERE 1 = 1) AS xifpdSeqCount 
+				<include refid="selectCommon"/>
+			ORDER BY
+				a.ifpdSeq DESC
+		)aa limit #{rowNumToShow} offset #{startRnumForMysql}
+	
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO product(
+			ifpdName,
+			ifpdUseNy,
+			ifpdDesc,
+			ifpdDelNy,
+			ifpdReg,
+			ifpdUpdate,
+			member_ifmmSeq
+		)VALUES(
+		#{ifpdName},
+		#{ifpdUseNy},
+		#{ifpdDesc},
+		#{ifpdDelNy},
+		now(),
+		now(),
+		#{member_ifmmSeq}
+		
+	)
+	<selectKey resultType="String" keyProperty="ifpdSeq" order="AFTER">
+				SELECT last_insert_id()
+</selectKey>
+
+	</insert>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			ifpdName,
+			ifpdUseNy,
+			ifpdDesc,
+			ifpdDelNy,
+			ifpdReg,
+			ifpdUpdate,
+			
+		FROM
+			yuz.product 
+		WHERE 1 = 1
+			AND ifpdSeq = #{ifpdSeq}	
+			
+	
+	</select>
+	
+	<update id="update">
+		UPDATE yuz.product
+		SET
+			ifpdName = #{ifpdName},
+			ifpdUseNy = #{ifpdUseNy},
+			ifpdDesc = #{ifpdDesc},
+			ifpdDelNy = #{ifpdDelNy}
+		WHERE 1 = 1
+			AND ifpdSeq = #{ifpdSeq}	
+	</update>
+	
+	  <update id="uelete">
+	  		UPDATE yuz.product
+	  		SET
+	  			ifpdDelNy = 1
+	  		WHERE 1 = 1
+	  			AND ifpdSeq = #{ifpdSeq}	
+	  
+	  </update>
+	  
+	  <delete id="delete">
+	  		DELETE FROM yuz.product
+	  		WHERE 1=1
+	  			AND ifpdSeq = #{ifpdSeq}
+	  </delete>
+	  
+		  <!-- for cache -->
+	<select id="selectListCachedProductArrayList" resultMap="resultMapObj">
+		SELECT 
+			ifpdSeq,
+			ifpdName
+			
+		FROM
+			yuz.product
+		WHERE 1=1
+			AND ifpdDelNy = 0
+		    AND ifpdUseNy = 1
+	</select>
+
+	  
+</mapper>

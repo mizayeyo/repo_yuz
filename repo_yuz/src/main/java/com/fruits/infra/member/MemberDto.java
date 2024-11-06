@@ -25,11 +25,14 @@ public class MemberDto {
 	private String ifmmAddress1;
 	private String ifmmAddress2;
 	private Integer ifmmPostCode;
-	private Integer ifmmTel;
+	private String ifmmTel;
 	private String ifmmMemo;
 	private String codegroup_ifcgSeq;
 	
 	private Integer xifmmSeqCount;
+	
+	private String xdmId;
+	private String xdmPw;
 	
 	
 //cache
@@ -106,7 +109,7 @@ public class MemberDto {
 	}
 
 
-	public Integer getIfmmTel() {
+	public String getIfmmTel() {
 		return ifmmTel;
 	}
 
@@ -123,6 +126,16 @@ public class MemberDto {
 
 	public Integer getXifmmSeqCount() {
 		return xifmmSeqCount;
+	}
+
+
+	public String getXdmId() {
+		return xdmId;
+	}
+
+
+	public String getXdmPw() {
+		return xdmPw;
 	}
 
 
@@ -201,7 +214,7 @@ public class MemberDto {
 	}
 
 
-	public void setIfmmTel(Integer ifmmTel) {
+	public void setIfmmTel(String ifmmTel) {
 		this.ifmmTel = ifmmTel;
 	}
 
@@ -221,10 +234,22 @@ public class MemberDto {
 	}
 
 
+	public void setXdmId(String xdmId) {
+		this.xdmId = xdmId;
+	}
+
+
+	public void setXdmPw(String xdmPw) {
+		this.xdmPw = xdmPw;
+	}
+
+
 	public static void setCachedMemberArrayList(List<MemberDto> cachedMemberArrayList) {
 		MemberDto.cachedMemberArrayList = cachedMemberArrayList;
 	}
 
+	
+	
 
 	
 

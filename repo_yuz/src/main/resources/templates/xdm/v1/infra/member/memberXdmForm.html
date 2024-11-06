@@ -515,7 +515,7 @@
 									</div>
 								</div>
 								<div class="row g-2">
-								<div class="col-sm-12 col-md-3 col-lg-3">
+									<div class="col-sm-12 col-md-3 col-lg-3">
 										<label class="form-label mb-0">닉네임<font color="red"><strong>*</strong></font></label>
 										<input type="text" class="form-control" name="ifmmNickName"
 											id="ifmmNickName" placeholder="닉네임을 입력해 주세요" required>
@@ -541,28 +541,26 @@
 										<select class="form-select" id="ifmmGender" name="ifmmGender"
 											required>
 											<option selected disable value="">성별을 선택하세요</option>
-											<option value="1">남성</option>
-											<option value="0">여성</option>
+											<option value="1" th:selected="${item?.ifmmGender == 1}">남성</option>
+											<option value="2" th:selected="${item?.ifmmGender == 2}">여성</option>
 										</select>
-										<div class="invalid-feedback">사용여부를 선택해주세요.</div>
+										<div class="invalid-feedback">성별을 선택해주세요.</div>
 									</div>
-									
+
 								</div>
 								<div class="row g-2">
-								<div class="col-sm-12 col-md-3 col-lg-3">
+									<div class="col-sm-12 col-md-3 col-lg-3">
 										<label class="form-label mb-0">전화번호<font color="red"><strong>*</strong></font></label>
 										<input type="text" class="form-control" name="ifmmTel"
 											id="ifmmTel" placeholder="전화번호를 입력해 주세요" required>
-										<div class="invalid-feedback" id="ifmmTelFeedback">전화번호
+										<div class="invalid-feedback" id="ifmmTelFeedback">전화번호를
 											입력해 주세요.</div>
-										<div class="invalid-feedback" id="ifmmTelRegExpFeedback">아이디는
-											한글, 영대소문자, 숫자만 입력해 주세요.</div>
 									</div>
 									<div class="col-sm-12 col-md-3 col-lg-3 d-flex">
 										<div class="w-100">
 											<label class="form-label mb-0">우편번호<font color="red"><strong>*</strong></font></label>
-											<input type="text" class="form-control" name="postcode"
-												id="sample6_postcode" placeholder="우편번호" required readonly>
+											<input type="text" class="form-control" name="ifmmPostCode"
+												id="sample6_postcode" placeholder="우편번호" required>
 											<div class="invalid-feedback">우편번호를 입력해 주세요.</div>
 										</div>
 
@@ -572,13 +570,13 @@
 									</div>
 									<div class="col-sm-12 col-md-3 col-lg-3">
 										<label class="form-label mb-0">주소<font color="red"><strong>*</strong></font></label>
-										<input type="text" class="form-control" name="address"
+										<input type="text" class="form-control" name="ifmmAddress1"
 											id="sample6_address" placeholder="주소" required readonly>
 										<div class="invalid-feedback">주소를 입력해 주세요.</div>
 									</div>
 									<div class="col-sm-12 col-md-3 col-lg-3">
 										<label class="form-label mb-0">상세주소</label> <input type="text"
-											class="form-control" name="detailAddress"
+											class="form-control" name="ifmmAddress2"
 											id="sample6_detailAddress" placeholder="상세주소" required>
 										<div class="invalid-feedback">상세주소를 입력해 주세요.</div>
 									</div>
@@ -707,11 +705,10 @@
 				ifmmPassword.classList.remove('is-invalid'); //빨간테두리 삭제
 				ifmmPassword.classList.add('is-valid'); //유효성 검사 성공 처리 - 초록테두리
 			}
-			
+
 			//ifmmId
 			var ifmmId = document.getElementById("ifmmId");
-			var ifmmIdValue = document.getElementById("ifmmId").value
-					.trim();
+			var ifmmIdValue = document.getElementById("ifmmId").value.trim();
 
 			if (ifmmIdValue == "" || ifmmIdValue == null) { //선택 안했을 경우
 				ifmmId.classList.add('is-invalid');//유효성 검사 실패 처리 - 빨간테두리
@@ -737,7 +734,6 @@
 				ifmmNickName.classList.add('is-valid'); //유효성 검사 성공 처리 - 초록테두리
 			}
 
-
 			//ifmmBirthday
 			var ifmmBirthday = document.getElementById("ifmmBirthday");
 			var ifmmBirthdayValue = document.getElementById("ifmmBirthday").value
@@ -753,11 +749,57 @@
 				ifmmBirthday.classList.add('is-valid'); //유효성 검사 성공 처리 - 초록테두리
 			}
 
+			//ifmmEmail
+			var ifmmEmail = document.getElementById("ifmmEmail");
+			var ifmmEmailValue = document.getElementById("ifmmEmail").value
+					.trim();
+
+			if (ifmmEmailValue == "" || ifmmEmailValue == null) { //선택 안했을 경우
+				ifmmEmail.classList.add('is-invalid');//유효성 검사 실패 처리 - 빨간테두리
+				ifmmEmail.focus();
+				return false;
+			} else {
+				//by pass
+				ifmmEmail.classList.remove('is-invalid'); //빨간테두리 삭제
+				ifmmEmail.classList.add('is-valid'); //유효성 검사 성공 처리 - 초록테두리
+			}
+
+			//ifmmGender
+			var ifmmGender = document.getElementById("ifmmGender");
+			var ifmmGenderValue = document.getElementById("ifmmGender").value
+					.trim();
+
+			if (ifmmGenderValue == "" || ifmmGenderValue == null) { //선택 안했을 경우
+				ifmmGender.classList.add('is-invalid');//유효성 검사 실패 처리 - 빨간테두리
+				ifmmGender.focus();
+				return false;
+			} else {
+				//by pass
+				ifmmGender.classList.remove('is-invalid'); //빨간테두리 삭제
+				ifmmGender.classList.add('is-valid'); //유효성 검사 성공 처리 - 초록테두리
+			}
+
+			//ifmmTel
+			var ifmmTel = document.getElementById("ifmmTel");
+			var ifmmTelValue = document.getElementById("ifmmTel").value.trim();
+
+			if (ifmmTelValue == "" || ifmmTelValue == null) { //선택 안했을 경우
+				ifmmTel.classList.add('is-invalid');//유효성 검사 실패 처리 - 빨간테두리
+				ifmmTel.focus();
+				return false;
+			} else {
+				//by pass
+				ifmmTel.classList.remove('is-invalid'); //빨간테두리 삭제
+				ifmmTel.classList.add('is-valid'); //유효성 검사 성공 처리 - 초록테두리
+			}
+			
+			
+			
+
 			form.action = "/xdm/v1/infra/member/memberXdmInst";
 			form.submit();
 
 		}
-		
 
 		// validation check
 
@@ -817,7 +859,7 @@
 								// 조합된 참고항목을 해당 필드에 넣는다.
 
 							} else {
-								document.getElementById("sample6_extraAddress").value = '';
+								
 							}
 
 							// 우편번호와 주소 정보를 해당 필드에 넣는다.

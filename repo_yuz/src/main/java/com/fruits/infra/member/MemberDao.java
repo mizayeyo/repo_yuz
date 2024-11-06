@@ -33,6 +33,9 @@ public interface MemberDao {
 	
 	// paging
 	public int selectOneCount(MemberVo MemberVo);
+	
+	//Log in 
+	public MemberDto memberSelectOneLogin(MemberDto memberDto);
 
 	
 	// for cache

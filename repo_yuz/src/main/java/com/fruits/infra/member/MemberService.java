@@ -65,6 +65,14 @@ public class MemberService {
 			return memberDao.selectOneCount(memberVo);
 		}
 		
+		
+		//Login
+		public MemberDto memberSelectOneLogin(MemberDto memberDto) {
+			return memberDao.memberSelectOneLogin(memberDto);
+		}
+		
+		
+		
 		// for cache
 			@PostConstruct
 			public void selectListCachedMemberArrayList() {

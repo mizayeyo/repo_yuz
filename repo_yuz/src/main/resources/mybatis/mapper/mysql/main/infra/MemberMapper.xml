@@ -81,23 +81,25 @@
 			    ifmmTel,
 			    ifmmMemo,
 			    ifmmRegistDate,
-			    ifmmDeleteDate
+			    ifmmDeleteDate,
+			    ifmmDefaulNy
 		)VALUES(
 		#{ifmmName},
 		#{ifmmId},
 		#{ifmmPassword},
 		#{ifmmNickName},
 		#{ifmmBirthday},
-		#{ifmmDelNy},
+		0,
 		#{ifmmEmail},
 		#{ifmmGender},
 		#{ifmmAddress1},
 		#{ifmmAddress2},
 		#{ifmmPostCode},
 		#{ifmmTel},
-		#{ifmmMemo},
+		0,
 		now(),
-		now()
+		now(),
+		0
 	)
 	<selectKey resultType="String" keyProperty="ifmmSeq" order="AFTER">
 				SELECT last_insert_id()
@@ -107,6 +109,7 @@
 	
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
+				a.ifmmSeq,
 				a.ifmmName,
 			    a.ifmmId,
 			    a.ifmmPassword,
@@ -119,7 +122,7 @@
 			    a.ifmmAddress2,
 			    a.ifmmPostCode,
 			    a.ifmmTel,
-			    a.ifmmMemo
+			    a.ifmmMemo,
 			    a.ifmmRegistDate,
 			    a.ifmmDeleteDate
 		FROM
@@ -136,7 +139,7 @@
 				ifmmName = #{ifmmName},
 			    ifmmId = #{ifmmId},
 			    ifmmPassword =  #{ifmmPassword},
-			    ifmmNickName = #{ifmmNickanme},
+			    ifmmNickName = #{ifmmNickName},
 			    ifmmBirthday = #{ifmmBirthday},
 			    ifmmDelNy = #{ifmmDelNy},
 			    ifmmEmail = #{ifmmEmail},
@@ -177,6 +180,30 @@
 			 AND ifmmDelNy IN (0, 1) 
 		   
 	</select>
+	
+	<select id="memberSelectOneId" resultMap="resultMapObj">
+		SELECT
+			a.ifmmId,
+			
+		FROM
+			yuz.member a
+		WHERE
+			1 = 1
+			AND a.ifmmId = #{ifmmId}
+	</select>	
+
+
+	<select id="memberSelectOneLogin" resultMap="resultMapObj">
+		SELECT
+			a.ifmmId,
+			a.ifmmPassword
+		FROM
+			yuz.member a
+		WHERE
+			1 = 1
+			AND a.ifmmId = #{ifmmId}
+			AND a.ifmmPassword = #{ifmmPassword}
+	</select>				
 
 	  
 </mapper>
