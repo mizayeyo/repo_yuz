@@ -44,12 +44,12 @@ public class MemberController {
 		return "xdm/v1/infra/member/memberXdmForm";
 	}
 	
-	@RequestMapping(value="/usr/v1/infra/member/memberXdmLogin")
-	public String memberXdmLogin() {
-		return "usr/v1/infra/member/memberXdmLogin";
+	
+	//유저메인페이지
+	@RequestMapping(value="/usr/v1/infra/member/memberUsrMain")
+	public String memberUsrMain() {
+		return "usr/v1/infra/member/memberUsrMain";
 	}
-	
-	
 	
 	@RequestMapping(value="/xdm/v1/infra/member/memberXdmInst")
 	public String memberXdmInst(MemberDto memberDto) {
@@ -62,12 +62,21 @@ public class MemberController {
 	}
 	
 	
-	//Login
+	// Xdm Login
 	@RequestMapping(value="/xdm/v1/infra/member/memberXdmLogin")
 	public String memberXdmLogin(MemberDto memberDto) {
 		memberService.memberSelectOneLogin(memberDto);
 		return "/xdm/v1/infra/member/memberXdmLogin";
 	}
+	
+	
+	// User Login
+	@RequestMapping(value="/usr/v1/infra/member/memberUsrLogin")
+	public String memberUsrLogin(MemberDto memberDto) {
+		memberService.memberSelectOneLogin(memberDto);
+		return "/usr/v1/infra/member/memberUsrLogin";
+	}
+	
 	
 	@RequestMapping(value="xdm/v1/infra/member/memberXdmIndex")
 	public String memberXdmIndex() {
@@ -76,6 +85,7 @@ public class MemberController {
 	
 	
 	
+	//관리자 로그인
 	@ResponseBody
 	@RequestMapping(value="/xdm/v1/infra/member/memberXdmLoginProc")
 	public Map<String, Object> memberXdmLoginProc(MemberDto memberDto){
@@ -93,6 +103,9 @@ public class MemberController {
 		return returnMap;
 	}
 	
+	
+	
+	
 	// LogoutProc
 		@ResponseBody
 		@RequestMapping(value="/xdm/v1/infra/member/memberXdmLogoutProc")
@@ -103,7 +116,23 @@ public class MemberController {
 			return returnMap;
 		}
 	
-	
+		//유저 로그인
+		@ResponseBody
+		@RequestMapping(value="/usr/v1/infra/member/memberUsrLoginProc")
+		public Map<String, Object> memberUsrLoginProc(MemberDto memberDto){
+			
+			Map<String, Object> returnMap = new HashMap<String, Object>(); //결과를 담기 위한 맵 생성
+			
+			MemberDto rtMember = memberService.memberSelectOneLogin(memberDto); //사용자 정보 조회
+			
+			if(rtMember !=null) {
+				returnMap.put("rt", "success"); //성공 응답 설정
+			} else {
+				returnMap.put("rt", "fail"); //실패 응답 설정
+			}
+			
+			return returnMap;
+		}
 	
 	
 	 //UPDATE 축약형
