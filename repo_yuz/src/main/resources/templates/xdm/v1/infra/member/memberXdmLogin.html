@@ -123,7 +123,7 @@
 					}
 				,success: function(response){ //요청이 성공적으로 완료되면 실행될 함수
 					if(response.rt == "success"){ //응답의 rt속성이 "success"일 경우
-						alert(response.rt);
+						alert("로그인 성공");
 						location.href = "/xdm/v1/infra/member/memberXdmIndex" //메인 페이지로 리다이렉션
 					} else { // 로그인 실패시 모달 창을 띄움
 						alert("로그인 실패");

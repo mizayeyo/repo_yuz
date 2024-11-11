@@ -180,19 +180,9 @@
 			 AND ifmmDelNy IN (0, 1) 
 		   
 	</select>
-	
-	<select id="memberSelectOneId" resultMap="resultMapObj">
-		SELECT
-			a.ifmmId,
-			
-		FROM
-			yuz.member a
-		WHERE
-			1 = 1
-			AND a.ifmmId = #{ifmmId}
-	</select>	
 
 
+<!-- 로그인 -->
 	<select id="memberSelectOneLogin" resultMap="resultMapObj">
 		SELECT
 			a.ifmmId,
@@ -203,7 +193,23 @@
 			1 = 1
 			AND a.ifmmId = #{ifmmId}
 			AND a.ifmmPassword = #{ifmmPassword}
-	</select>				
+	</select>		
+	
+		
+<!-- 	로그인 세션 유지		 -->
+	<select id="memberSelectOneId" resultMap="resultMapObj">
+		SELECT
+			a.ifmmSeq,
+			a.ifmmId,
+			a.ifmmName
+			
+		FROM
+			yuz.member a
+		WHERE
+			1 = 1
+			AND a.ifmmId = #{ifmmId}
+	</select>	
+
 
 	  
 </mapper>

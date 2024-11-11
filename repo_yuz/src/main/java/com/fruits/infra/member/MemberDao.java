@@ -36,6 +36,8 @@ public interface MemberDao {
 	
 	//Log in 
 	public MemberDto memberSelectOneLogin(MemberDto memberDto);
+	
+	public MemberDto memberSelectOneId(MemberDto memberDto);
 
 	
 	// for cache

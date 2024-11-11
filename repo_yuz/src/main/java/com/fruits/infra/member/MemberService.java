@@ -72,6 +72,11 @@ public class MemberService {
 		}
 		
 		
+		public MemberDto memberSlectOneId(MemberDto memberDto) {
+			return memberDao.memberSelectOneId(memberDto);
+		}
+		
+		
 		
 		// for cache
 			@PostConstruct
