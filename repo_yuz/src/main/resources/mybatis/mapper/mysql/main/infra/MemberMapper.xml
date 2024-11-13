@@ -54,6 +54,7 @@
 			    a.ifmmAddress2,
 			    a.ifmmPostCode,
 			    a.ifmmTel,
+			    a.ifmmTelCom,
 			    a.ifmmMemo,
 
 				(SELECT count(ifmmSeq) FROM member AS a WHERE 1 = 1 ANd a.ifmmSeq = a.ifmmSeq) AS xifmmSeqCount
@@ -64,48 +65,48 @@
 	
 	</select>
 	
-	<insert id="insert">
-		INSERT INTO member(
-				
-			    ifmmName,
-			    ifmmId,
-			    ifmmPassword,
-			    ifmmNickName,
-			    ifmmBirthday,
-			    ifmmDelNy,
-			    ifmmEmail,
-			    ifmmGender,
-			    ifmmAddress1,
-			    ifmmAddress2,
-			    ifmmPostCode,
-			    ifmmTel,
-			    ifmmMemo,
-			    ifmmRegistDate,
-			    ifmmDeleteDate,
-			    ifmmDefaulNy
-		)VALUES(
-		#{ifmmName},
-		#{ifmmId},
-		#{ifmmPassword},
-		#{ifmmNickName},
-		#{ifmmBirthday},
-		0,
-		#{ifmmEmail},
-		#{ifmmGender},
-		#{ifmmAddress1},
-		#{ifmmAddress2},
-		#{ifmmPostCode},
-		#{ifmmTel},
-		0,
-		now(),
-		now(),
-		0
-	)
-	<selectKey resultType="String" keyProperty="ifmmSeq" order="AFTER">
-				SELECT last_insert_id()
-</selectKey>
-
-	</insert>
+<insert id="insert">
+    INSERT INTO member(
+        ifmmName,
+        ifmmId,
+        ifmmPassword,
+        ifmmNickName,
+        ifmmBirthday,
+        ifmmDelNy,
+        ifmmEmail,
+        ifmmGender,
+        ifmmAddress1,
+        ifmmAddress2,
+        ifmmPostCode,
+        ifmmTel,
+        ifmmTelCom,
+        ifmmMemo,
+        ifmmRegistDate,
+        ifmmDeleteDate,
+        ifmmDefaulNy
+    ) VALUES(
+        #{ifmmName},
+        #{ifmmId},
+        #{ifmmPassword},
+        #{ifmmNickName},
+        #{ifmmBirthday},
+        0,
+        #{ifmmEmail},
+        #{ifmmGender},
+        #{ifmmAddress1},
+        #{ifmmAddress2},
+        #{ifmmPostCode},
+        #{ifmmTel},
+        #{ifmmTelCom},
+        0,
+        now(),
+        now(),
+        0
+    )
+    <selectKey resultType="String" keyProperty="ifmmSeq" order="AFTER">
+        SELECT last_insert_id()
+    </selectKey>
+</insert>
 	
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
@@ -122,6 +123,7 @@
 			    a.ifmmAddress2,
 			    a.ifmmPostCode,
 			    a.ifmmTel,
+			    a.ifmmTelCom,
 			    a.ifmmMemo,
 			    a.ifmmRegistDate,
 			    a.ifmmDeleteDate
@@ -148,6 +150,7 @@
 			    ifmmAddress2 = #{ifmmAddress2},
 			    ifmmPostCode = #{ifmmPostCode},
 			    ifmmTel = #{ifmmTel},
+			    ifmmTel = #{ifmmTelCom},
 			    ifmmMemo = #{ifmmMemo}
 		WHERE 1 = 1
 			AND ifmmSeq = #{ifmmSeq}	

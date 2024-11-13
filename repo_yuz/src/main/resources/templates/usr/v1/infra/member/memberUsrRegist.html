@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="INSPIRO" />
+<meta name="description"
+	content="Themeforest Template Polo, html template">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Document title -->
+<title>N.no New World</title>
+<!-- Stylesheets & Fonts -->
+<link href="/usr/v1/css/plugins.css" rel="stylesheet">
+<link href="/usr/v1/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Body Inner -->
+	<div class="body-inner">
+		<!-- Section -->
+		<section class="pt-5 pb-5"
+			data-bg-image="/usr/v1/template/images/misa/login_1.jpeg">
+			<div class="container-fluid d-flex flex-column">
+				<div class="row align-items-center min-vh-100">
+					<div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+						<div class="card shadow-lg">
+							<div class="card-body py-5 px-sm-5">
+								<h2>회원가입</h2>
+								<form name="form" method="post" class="needs-validation mt-5"
+									novalidate>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="username">이름</label> <input type="text"
+												class="form-control" name="ifmmName" id="ifmmName"
+												placeholder="이름을 입력하세요" required>
+											<div class="invalid-feedback" id="ifmmNameFeedback">이름을
+												입력해 주세요</div>
+											<div class="invalid-feedback" id="ifmmNameRegExpFeedback">이름은
+												한글, 영문만 입력해 주세요</div>
+										</div>
+										<div class="form-group col-md-6">
+											<label for="email">이메일</label> <input type="email"
+												class="form-control" name="ifmmEmail" id="ifmmEmail"
+												placeholder="이메일을 입력하세요" required>
+											<div class="invalid-feedback" id="ifmmEmailFeedback">이메일을
+												입력해 주세요</div>
+											<div class="invalid-feedback" id="ifmmEmailRegExpFeedback">이메일
+												형식을 확인해 주세요</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="userid">아이디</label> <input type="text"
+												class="form-control" name="ifmmId" id="ifmmId"
+												placeholder="아이디를 입력하세요" required>
+											<div class="invalid-feedback" id="ifmmIdFeedback">아이디를
+												입력해 주세요</div>
+											<div class="invalid-feedback" id="ifmmIdRegExpFeedback">아이디는
+												영문, 숫자만 입력해 주세요</div>
+										</div>
+										<div class="form-group col-md-6">
+											<label for="usernickname">닉네임</label> <input type="text"
+												class="form-control" name="ifmmNickName" id="ifmmNickName"
+												placeholder="닉네임을 입력해주세요" required>
+											<div class="invalid-feedback" id="ifmmNickNameFeedback">닉네임을
+												입력해 주세요</div>
+											<div class="invalid-feedback" id="ifmmNickNameRegExpFeedback">닉네임은
+												한글 ,영문, 숫자로 4~20글자만 가능합니다.</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="password">비밀번호</label>
+											<div class="input-group show-hide-password">
+												<input class="form-control" name="ifmmPassword"
+													id="ifmmPassword" placeholder="비밀번호를 입력하세요" type="password"
+													required> <span class="input-group-text"><i
+													class="icon-eye" aria-hidden="true"
+													style="cursor: pointer;"></i></span>
+												<div class="invalid-feedback" id="ifmmPasswordFeedback">비밀번호
+													입력해 주세요</div>
+												<div class="invalid-feedback"
+													id="ifmmPasswordRegExpFeedback">비밀번호는 영문, 숫자, 특수문자로
+													8자이상, 숫자와 특수문자를 반드시 포함하여야 합니다.</div>
+											</div>
+										</div>
+										<div class="form-group col-md-6">
+											<label for="password2">비밀번호 확인</label>
+											<div class="input-group show-hide-password">
+												<input class="form-control" name="ifmmPassword2"
+													id="ifmmPassword2" placeholder="비밀번호를 입력하세요"
+													type="password" required> <span
+													class="input-group-text"><i class="icon-eye-off"
+													aria-hidden="true" style="cursor: pointer;"></i></span>
+												<div class="invalid-feedback" id="ifmmPassword2Feedback">비밀번호
+													입력해 주세요</div>
+												<div class="invalid-feedback"
+													id="ifmmPassword2RegExpFeedback"></div>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label for="gender">성별</label> <select class="form-select"
+												name="ifmmGender" id="ifmmGender" required>
+												<option selected disable value="">성별선택</option>
+												<option value="1">남성</option>
+												<option value="2">여성</option>
+											</select>
+											<div class="invalid-feedback" id="ifmmGenderFeedback">성별을
+												선택해 주세요</div>
+										</div>
+										<div class="form-group col-md-6">
+											<label for="userBirthday">생년월일</label> <input
+												class="form-control" type="date" name="ifmmBirthday"
+												id="ifmmBirthday" required>
+											<div class="invalid-feedback" id="ifmmBirthdayFeedback">생년월일을
+												입력해 주세요</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-2">
+											<label for="TelCom">통신사</label> <select class="form-select"
+												name="ifmmTelCom" id="ifmmTelCom" required>
+												<option selected disable value="">통신사</option>
+												<option value="1">SKT</option>
+												<option value="2">KT</option>
+												<option value="3">LG</option>
+												<option value="4">알뜰통신사</option>
+												<option value="5">기타</option>
+											</select>
+											<div class="invalid-feedback" id="ifmmTelComFeedback">통신사를
+												선택해 주세요</div>
+										</div>
+										<div class="form-group col-md-4">
+											<label for="telephone">전화번호</label> <input
+												class="form-control" type="ifmmTel" name="ifmmTel"
+												id="ifmmTel" placeholder="전화번호를 입력하세요" required>
+											<div class="invalid-feedback" id="ifmmTelFeedback">전화번호를
+												입력해 주세요</div>
+											<div class="invalid-feedback" id="ifmmTelRegExpFeedback">전화번호는
+												숫자만 입력해 주세요</div>
+										</div>
+										<div class="form-group col-md-5">
+											<label class="form-label">우편번호<font color="red"><strong>*</strong></font></label>
+											<input type="text" class="form-control" name="ifmmPostCode"
+												id="sample6_postcode" placeholder="우편번호" required>
+											<div class="invalid-feedback" id="ifmmPostCodeFeedback">우편번호를
+												입력해 주세요.</div>
+										</div>
+										<button type="button" class="btn btn-secondary col-1"
+											style="height: calc(2em + .95rem + 2px); margin-top: 30px;"
+											onclick="sample6_execDaumPostcode()">검색</button>
+									</div>
+									<div class="row">
+										<div class="form-group col-md-6">
+											<label class="form-label mb-0">주소<font color="red"><strong>*</strong></font></label>
+											<input type="text" class="form-control" name="ifmmAddress1"
+												id="sample6_address" placeholder="주소" required readonly>
+											<div class="invalid-feedback" id="ifmmAddress1Feedback">주소를
+												입력해 주세요.</div>
+										</div>
+										<div class="form-group col-md-6">
+											<label class="form-label mb-0">상세주소</label> <input
+												type="text" class="form-control" name="ifmmAddress2"
+												id="sample6_detailAddress" placeholder="상세주소" required>
+											<div class="invalid-feedback" id="ifmmAddress2Feedback">상세주소를
+												입력해 주세요.</div>
+										</div>
+									</div>
+									<div class="form-check">
+										<input type="checkbox" name="terms_conditions"
+											id="terms_conditions" class="form-check-input" value="1"
+											required> <label class="form-check-label"
+											for="terms_conditions">약관에 동의합니다</a>.
+										</label>
+									</div>
+									<button type="button" id="btnSubmit" class="btn btn-primary">가입하기</button>
+								</form>
+								<div class="mt-4">
+									<small>계정이 있으신가요?</small> <a
+										href="http://127.0.0.1:5500/html/n.no/06_page-user-login.html"
+										class="small fw-bold">로그인</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end: Section -->
+	</div>
+	<!-- end: Body Inner -->
+	<!-- Scroll top -->
+	<a id="scrollTop"><i class="icon-chevron-up"></i><i
+		class="icon-chevron-up"></i></a>
+	<!--Plugins-->
+	<script src="/usr/v1/js/jquery.js"></script>
+	<script src="/usr/v1/js/plugins.js"></script>
+	<!--Template functions-->
+	<script src="/usr/v1/js/functions.js"></script>
+
+	<!--     by developer -->
+	<script src="/xdm/v1/jquery/jquery-3.7.1.min.js"></script>
+	<link rel="stylesheet"
+		href="/xdm/v1/css/datetimepicker/jquery.datetimepicker.min.css" />
+
+	<script type="text/javascript">
+		// validation
+		document.getElementById("btnSubmit").onclick = function() {
+
+			// ifmmName 요소와 관련된 변수 설정
+			var ifmmName = document.getElementById("ifmmName");
+			var ifmmNameValue = document.getElementById("ifmmName").value
+					.trim();
+			var ifmmNameRegExp = /^[ㄱ-ㅎ가-힣A-Za-z]+$/; // 한글 또는 영문만 허용 (숫자 제외)
+			var ifmmNameFeedback = document.getElementById("ifmmNameFeedback");
+			var ifmmNameRegExpFeedback = document
+					.getElementById("ifmmNameRegExpFeedback");
+
+			// 기존의 validation 초기화
+			ifmmName.classList.remove('is-valid', 'is-invalid');
+			ifmmNameFeedback.style.display = 'none';
+			ifmmNameRegExpFeedback.style.display = 'none';
+
+			// 필수 입력값 확인
+			if (ifmmNameValue == "" || ifmmNameValue == null) { // 입력값이 비어있는지 확인
+				ifmmNameFeedback.style.display = 'block'; // 이름을 입력해 주세요 메시지 표시
+				ifmmName.classList.add('is-invalid');
+				ifmmName.focus();
+				return false; // 필수 입력값이 없으면 정규식 검증을 건너뛰고 함수 종료
+			}
+
+			// 정규식 검증 (빈 값이 아닌 경우에만 수행)
+			if (!ifmmNameRegExp.test(ifmmNameValue)) { // 한글 또는 영문만 허용
+				ifmmNameRegExpFeedback.style.display = 'block'; // 이름은 한글, 영문만 입력해 주세요 메시지 표시
+				ifmmName.classList.add('is-invalid');
+				ifmmName.focus();
+				return false;
+			} else {
+
+				ifmmName.classList.add('is-valid');
+			}
+			// ifmmEmail 요소와 관련된 변수 설정
+			var ifmmEmail = document.getElementById("ifmmEmail");
+			var ifmmEmailValue = document.getElementById("ifmmEmail").value
+					.trim();
+			var ifmmEmailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // 이메일 형식 검증
+			var ifmmEmailFeedback = document
+					.getElementById("ifmmEmailFeedback");
+			var ifmmEmailRegExpFeedback = document
+					.getElementById("ifmmEmailRegExpFeedback");
+
+			// 기존의 validation 초기화
+			ifmmEmail.classList.remove('is-valid', 'is-invalid');
+			ifmmEmailFeedback.style.display = 'none';
+			ifmmEmailRegExpFeedback.style.display = 'none';
+
+			// 필수 입력값 확인
+			if (ifmmEmailValue === "" || ifmmEmailValue == null) { // 입력값이 비어있는지 확인
+				ifmmEmailFeedback.style.display = 'block'; // 이메일을 입력해 주세요 메시지 표시
+				ifmmEmail.classList.add('is-invalid');
+				ifmmEmail.focus();
+				return false; // 필수 입력값이 없으면 정규식 검증을 건너뛰고 함수 종료
+			}
+
+			// 정규식 검증 (빈 값이 아닌 경우에만 수행)
+			if (!ifmmEmailRegExp.test(ifmmEmailValue)) { // 이메일 형식 검증
+				ifmmEmailRegExpFeedback.style.display = 'block'; // 이메일 형식이 올바르지 않습니다 메시지 표시
+				ifmmEmail.classList.add('is-invalid');
+				ifmmEmail.focus();
+				return false;
+			} else {
+				ifmmEmail.classList.add('is-valid');
+			}
+
+			// ifmmId 요소와 관련된 변수 설정
+			var ifmmId = document.getElementById("ifmmId");
+			var ifmmIdValue = document.getElementById("ifmmId").value.trim();
+			var ifmmIdRegExp = /^[a-zA-Z0-9]{4,20}$/; // 아이디는 알파벳, 숫자만 가능하고, 4~20자 길이
+			var ifmmIdFeedback = document.getElementById("ifmmIdFeedback");
+			var ifmmIdRegExpFeedback = document
+					.getElementById("ifmmIdRegExpFeedback");
+
+			// 기존의 validation 초기화
+			ifmmId.classList.remove('is-valid', 'is-invalid');
+			ifmmIdFeedback.style.display = 'none';
+			ifmmIdRegExpFeedback.style.display = 'none';
+
+			// 필수 입력값 확인
+			if (ifmmIdValue == "" || ifmmIdValue == null) { // 입력값이 비어있는지 확인
+				ifmmIdFeedback.style.display = 'block'; // 아이디를 입력해 주세요 메시지 표시
+				ifmmId.classList.add('is-invalid');
+				ifmmId.focus();
+				return false; // 필수 입력값이 없으면 정규식 검증을 건너뛰고 함수 종료
+			}
+
+			// 정규식 검증 (빈 값이 아닌 경우에만 수행)
+			if (!ifmmIdRegExp.test(ifmmIdValue)) { // 아이디는 4~20자 알파벳과 숫자만 허용
+				ifmmIdRegExpFeedback.style.display = 'block'; // 아이디는 4~20자, 알파벳과 숫자만 입력해 주세요 메시지 표시
+				ifmmId.classList.add('is-invalid');
+				ifmmId.focus();
+				return false;
+			} else {
+				ifmmId.classList.add('is-valid');
+			}
+
+			// ifmmNickName 요소와 관련된 변수 설정
+			var ifmmNickName = document.getElementById("ifmmNickName");
+			var ifmmNickNameValue = document.getElementById("ifmmNickName").value
+					.trim();
+			var ifmmNickNameRegExp = /^[a-zA-Z가-힣0-9]{4,20}$/; // 닉네임은 알파벳, 한글,숫자만 가능하고, 4~20자 길이
+			var ifmmNickNameFeedback = document
+					.getElementById("ifmmNickNameFeedback");
+			var ifmmNickNameRegExpFeedback = document
+					.getElementById("ifmmNickNameRegExpFeedback");
+
+			// 기존의 validation 초기화
+			ifmmNickName.classList.remove('is-valid', 'is-invalid');
+			ifmmNickNameFeedback.style.display = 'none';
+			ifmmNickNameRegExpFeedback.style.display = 'none';
+
+			// 필수 입력값 확인
+			if (ifmmNickNameValue == "" || ifmmNickNameValue == null) { // 입력값이 비어있는지 확인
+				ifmmNickNameFeedback.style.display = 'block'; // 닉네임을 입력해 주세요 메시지 표시
+				ifmmNickName.classList.add('is-invalid');
+				ifmmNickName.focus();
+				return false; // 필수 입력값이 없으면 정규식 검증을 건너뛰고 함수 종료
+			}
+
+			// 정규식 검증 (빈 값이 아닌 경우에만 수행)
+			if (!ifmmNickNameRegExp.test(ifmmNickNameValue)) { // 닉네임은 4~20자 알파벳과 숫자만 허용
+				ifmmNickNameRegExpFeedback.style.display = 'block'; // 닉네임은 4~20자, 알파벳과 숫자만 입력해 주세요 메시지 표시
+				ifmmNickName.classList.add('is-invalid');
+				ifmmNickName.focus();
+				return false;
+			} else {
+				ifmmNickName.classList.add('is-valid');
+			}
+
+			// ifmmPassword 요소와 관련된 변수 설정
+			var ifmmPassword = document.getElementById("ifmmPassword");
+			var ifmmPasswordValue = ifmmPassword.value.trim();
+			var ifmmPasswordRegExp = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+[\]{}|;:'",.<>?])[a-zA-Z0-9!@#$%^&*()_+[\]{}|;:'",.<>?]{8,}$/;
+			var ifmmPasswordFeedback = document.getElementById("ifmmPasswordFeedback");
+			var ifmmPasswordRegExpFeedback = document.getElementById("ifmmPasswordRegExpFeedback");
+
+			// 기존의 validation 초기화
+			ifmmPassword.classList.remove('is-valid', 'is-invalid');
+			ifmmPasswordFeedback.style.display = 'none';
+			ifmmPasswordRegExpFeedback.style.display = 'none';
+
+			// 필수 입력값 확인
+			if (ifmmPasswordValue === "" || ifmmPasswordValue == null) {
+			    ifmmPasswordFeedback.style.display = 'block';
+			    ifmmPassword.classList.add('is-invalid');
+			    ifmmPassword.focus();
+			    return false;
+			}
+
+			// 정규식 검증
+			if (!ifmmPasswordRegExp.test(ifmmPasswordValue)) {
+			    ifmmPasswordRegExpFeedback.style.display = 'block';
+			    ifmmPassword.classList.add('is-invalid');
+			    ifmmPassword.focus();
+			    return false;
+			} else {
+			    ifmmPassword.classList.add('is-valid');
+			}
+
+			// ifmmPassword2 요소와 관련된 변수 설정
+			var ifmmPassword2 = document.getElementById("ifmmPassword2");
+			var ifmmPassword2Value = ifmmPassword2.value.trim();
+			var ifmmPassword2Feedback = document.getElementById("ifmmPassword2Feedback");
+
+			// 기존의 validation 초기화
+			ifmmPassword2.classList.remove('is-valid', 'is-invalid');
+			ifmmPassword2Feedback.style.display = 'none';
+
+			// 필수 입력값 확인
+			if (ifmmPassword2Value === "" || ifmmPassword2Value == null) {
+			    ifmmPassword2Feedback.style.display = 'block';
+			    ifmmPassword2.classList.add('is-invalid');
+			    ifmmPassword2.focus();
+			    return false;
+			}
+
+			// 비밀번호 일치 확인
+			if (ifmmPasswordValue !== ifmmPassword2Value) {
+			    ifmmPassword2Feedback.innerText = "비밀번호가 일치하지 않습니다.";
+			    ifmmPassword2Feedback.style.display = 'block';
+			    ifmmPassword2.classList.add("is-invalid");
+			    ifmmPassword2.classList.remove("is-valid");
+			    ifmmPassword2.focus();
+			    return false;
+			} else {
+			    ifmmPassword2.classList.add('is-valid');
+			}
+
+			
+			
+
+			//ifmmGender
+
+			// ifmmGender 요소와 관련된 변수 설정
+			var ifmmGender = document.getElementById("ifmmGender");
+			var ifmmGenderValue = ifmmGender.value; // 선택된 값 가져오기
+			var ifmmGenderFeedback = document
+					.getElementById("ifmmGenderFeedback");
+
+			// 기존의 스타일과 메시지 초기화
+			ifmmGender.classList.remove('is-valid', 'is-invalid');
+			ifmmGenderFeedback.style.display = 'none'; // 피드백 메시지 숨기기
+
+			// 필수 입력값 확인
+			if (ifmmGenderValue === "" || ifmmGenderValue == null) { // 선택된 값이 없으면
+				ifmmGenderFeedback.style.display = 'block'; // 성별을 선택해 주세요 메시지 표시
+				ifmmGender.classList.add('is-invalid'); // 빨간 테두리 추가
+				ifmmGender.focus();
+				return false; // 필수 입력값이 없으면 함수 종료
+			} else {
+				ifmmGender.classList.remove('is-invalid');
+				ifmmGender.classList.add('is-valid'); // 초록 테두리 추가
+			}
+
+			// ifmmBirthday 요소와 관련된 변수 설정
+			var ifmmBirthday = document.getElementById("ifmmBirthday");
+			var ifmmBirthdayValue = ifmmBirthday.value; // 선택된 날짜 값 가져오기
+			var ifmmBirthdayFeedback = document
+					.getElementById("ifmmBirthdayFeedback");
+
+			// 기존의 스타일과 메시지 초기화
+			ifmmBirthday.classList.remove('is-valid', 'is-invalid');
+			ifmmBirthdayFeedback.style.display = 'none'; // 피드백 메시지 숨기기
+
+			// 필수 입력값 확인
+			if (ifmmBirthdayValue === "" || ifmmBirthdayValue == null) { // 선택된 날짜가 없으면
+				ifmmBirthdayFeedback.style.display = 'block'; // 생일을 입력해 주세요 메시지 표시
+				ifmmBirthday.classList.add('is-invalid'); // 빨간 테두리 추가
+				ifmmBirthday.focus();
+				return false; // 필수 입력값이 없으면 함수 종료
+			} else {
+				ifmmBirthday.classList.remove('is-invalid');
+				ifmmBirthday.classList.add('is-valid'); // 초록 테두리 추가
+			}
+
+			//ifmmTelCom
+			// ifmmTelCom 요소와 관련된 변수 설정
+			var ifmmTelCom = document.getElementById("ifmmTelCom");
+			var ifmmTelComValue = ifmmTelCom.value; // 선택된 값 가져오기
+			var ifmmTelComFeedback = document
+					.getElementById("ifmmTelComFeedback");
+
+			// 기존의 스타일과 메시지 초기화
+			ifmmTelCom.classList.remove('is-valid', 'is-invalid');
+			ifmmTelComFeedback.style.display = 'none'; // 피드백 메시지 숨기기
+
+			// 필수 입력값 확인
+			if (ifmmTelComValue === "" || ifmmTelComValue == null) { // 선택된 값이 없으면
+				ifmmTelComFeedback.style.display = 'block'; // 전화번호를 입력해 주세요 메시지 표시
+				ifmmTelCom.classList.add('is-invalid'); // 빨간 테두리 추가
+				ifmmTelCom.focus();
+				return false; // 필수 입력값이 없으면 함수 종료
+			} else {
+				ifmmTelCom.classList.remove('is-invalid');
+				ifmmTelCom.classList.add('is-valid'); // 초록 테두리 추가
+			}
+
+			//ifmmTel
+			// ifmmTel 요소와 관련된 변수 설정
+			var ifmmTel = document.getElementById("ifmmTel");
+			var ifmmTelValue = document.getElementById("ifmmTel").value.trim();
+			var ifmmTelRegExp = /^[0-9]{8}$/; // 전화번호는 숫자만 가능하고, 8자 길이
+			var ifmmTelFeedback = document.getElementById("ifmmTelFeedback");
+			var ifmmTelRegExpFeedback = document
+					.getElementById("ifmmTelRegExpFeedback");
+
+			// 기존의 validation 초기화
+			ifmmTel.classList.remove('is-valid', 'is-invalid');
+			ifmmTelFeedback.style.display = 'none';
+			ifmmTelRegExpFeedback.style.display = 'none';
+
+			// 필수 입력값 확인
+			if (ifmmTelValue == "" || ifmmTelValue == null) { // 입력값이 비어있는지 확인
+				ifmmTelFeedback.style.display = 'block'; // 전화번호를 입력해 주세요 메시지 표시
+				ifmmTel.classList.add('is-invalid');
+				ifmmTel.focus();
+				return false; // 필수 입력값이 없으면 정규식 검증을 건너뛰고 함수 종료
+			}
+
+			// 정규식 검증 (빈 값이 아닌 경우에만 수행)
+			if (!ifmmTelRegExp.test(ifmmTelValue)) { // 전화번호는 숫자만 허용
+				ifmmTelRegExpFeedback.style.display = 'block'; // 전화번호는 숫자만 입력해 주세요 메시지 표시
+				ifmmTel.classList.add('is-invalid');
+				ifmmTel.focus();
+				return false;
+			} else {
+				ifmmTel.classList.add('is-valid');
+			}
+
+			//ifmmPostCode
+			// ifmmPostCode 요소와 관련된 변수 설정
+			var ifmmPostCode = document.getElementById("sample6_postcode");
+			var ifmmPostCodeValue = ifmmPostCode.value.trim();
+			var ifmmPostCodeRegExp = /^[0-9]{5}$/; // 우편번호는 5자리 숫자만 허용
+			var ifmmPostCodeFeedback = document
+					.getElementById("ifmmPostCodeFeedback");
+
+			// 기존의 validation 초기화
+			ifmmPostCode.classList.remove('is-valid', 'is-invalid');
+			ifmmPostCodeFeedback.style.display = 'none';
+
+			// 필수 입력값 확인
+			if (ifmmPostCodeValue == "" || ifmmPostCodeValue == null) { // 입력값이 비어있는지 확인
+				ifmmPostCodeFeedback.style.display = 'block'; // 우편번호를 입력해 주세요 메시지 표시
+				ifmmPostCode.classList.add('is-invalid');
+				ifmmPostCode.focus();
+				return false; // 필수 입력값이 없으면 정규식 검증을 건너뛰고 함수 종료
+			}
+
+			// 정규식 검증 (빈 값이 아닌 경우에만 수행)
+			if (!ifmmPostCodeRegExp.test(ifmmPostCodeValue)) { // 우편번호는 5자리 숫자만 허용
+				ifmmPostCodeFeedback.style.display = 'block'; // 5자리 숫자만 입력해 주세요 메시지 표시
+				ifmmPostCode.classList.add('is-invalid');
+				ifmmPostCode.focus();
+				return false;
+			} else {
+				ifmmPostCode.classList.add('is-valid');
+			}
+
+			//ifmmAddress1
+			//ifmmAddress2
+			// ifmmAddress2 요소와 관련된 변수 설정
+// 			var ifmmAddress2 = document.getElementById("ifmmAddress2");
+// 			var ifmmAddress2Value = document.getElementById("ifmmAddress2").value
+// 					.trim();
+// 			var ifmmAddress2RegExp = /^[가-힣0-9]+$/; // 숫자와 한글만 허용
+// 			var ifmmAddress2Feedback = document
+// 					.getElementById("ifmmAddress2Feedback");
+// 			var ifmmAddress2RegExpFeedback = document
+// 					.getElementById("ifmmAddress2RegExpFeedback");
+
+// 			// 기존의 validation 초기화
+// 			ifmmAddress2.classList.remove('is-valid', 'is-invalid');
+// 			ifmmAddress2Feedback.style.display = 'none';
+// 			ifmmAddress2RegExpFeedback.style.display = 'none';
+
+// 			// 필수 입력값 확인
+// 			if (ifmmAddress2Value == "" || ifmmAddress2Value == null) { // 입력값이 비어있는지 확인
+// 				ifmmAddress2Feedback.style.display = 'block'; // 주소를 입력해 주세요 메시지 표시
+// 				ifmmAddress2.classList.add('is-invalid');
+// 				ifmmAddress2.focus();
+// 				return false; // 필수 입력값이 없으면 정규식 검증을 건너뛰고 함수 종료
+// 			}
+
+// 			// 정규식 검증 (빈 값이 아닌 경우에만 수행)
+// 			if (!ifmmAddress2RegExp.test(ifmmAddress2Value)) { // 주소는 숫자와 한글만 허용
+// 				ifmmAddress2RegExpFeedback.style.display = 'block'; // 숫자와 한글만 입력해 주세요 메시지 표시
+// 				ifmmAddress2.classList.add('is-invalid');
+// 				ifmmAddress2.focus();
+// 				return false;
+// 			} else {
+// 				ifmmAddress2.classList.remove('is-invalid');
+// 				ifmmAddress2.classList.add('is-valid');
+// 			}
+
+			alert("로그인 페이지로 이동합니다");
+			let form = document.querySelector("form[name=form]");
+			form.action = "/usr/v1/infra/member/memberUsrInst";
+			form.submit();
+		}
+	</script>
+
+
+	<script
+		src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script>
+		function sample6_execDaumPostcode() {
+			new daum.Postcode(
+					{
+						oncomplete : function(data) {
+							// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+							// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+							// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+							var addr = ''; // 주소 변수
+							var extraAddr = ''; // 참고항목 변수
+
+							//사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+							if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+								addr = data.roadAddress;
+							} else { // 사용자가 지번 주소를 선택했을 경우(J)
+								addr = data.jibunAddress;
+							}
+
+							// 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+							if (data.userSelectedType === 'R') {
+								// 법정동명이 있을 경우 추가한다. (법정리는 제외)
+								// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+								if (data.bname !== ''
+										&& /[동|로|가]$/g.test(data.bname)) {
+									extraAddr += data.bname;
+								}
+								// 건물명이 있고, 공동주택일 경우 추가한다.
+								if (data.buildingName !== ''
+										&& data.apartment === 'Y') {
+									extraAddr += (extraAddr !== '' ? ', '
+											+ data.buildingName
+											: data.buildingName);
+								}
+								// 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+								if (extraAddr !== '') {
+									extraAddr = ' (' + extraAddr + ')';
+								}
+								// 조합된 참고항목을 해당 필드에 넣는다.
+
+							} else {
+
+							}
+
+							// 우편번호와 주소 정보를 해당 필드에 넣는다.
+							document.getElementById('sample6_postcode').value = data.zonecode;
+							document.getElementById("sample6_address").value = addr;
+							// 커서를 상세주소 필드로 이동한다.
+							document.getElementById("sample6_detailAddress")
+									.focus();
+						}
+					}).open();
+		}
+	</script>
+
+
+
+
+
+
+
+</body>
+
+</html>

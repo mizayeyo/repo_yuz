@@ -83,6 +83,19 @@ public class MemberController {
 		return "xdm/v1/infra/member/memberXdmIndex";
 	}
 	
+	//유저 회원가입
+	@RequestMapping(value="usr/v1/infra/member/memberUsrRegist")
+	public String memberUsrRegist() {
+		return "usr/v1/infra/member/memberUsrRegist";
+	}
+	
+	@RequestMapping(value="/usr/v1/infra/member/memberUsrInst")
+	public String memberUsrInst(MemberDto memberDto) {
+		
+		memberService.insert(memberDto);
+	
+		return "/usr/v1/infra/member/memberUsrLogin";
+	}
 	
 	
 	//관리자 로그인
@@ -156,7 +169,7 @@ public class MemberController {
 
 	
 	
-	// 관리자 LogoutProc
+	// LogoutProc
 	
 		@ResponseBody
 		@RequestMapping(value="/xdm/v1/infra/member/memberXdmLogoutProc")
@@ -166,21 +179,8 @@ public class MemberController {
 			returnMap.put("rt", "success");
 			return returnMap;
 		}
-		
-//		// 유저 LogoutProc
-//		
-//		@ResponseBody
-//		@RequestMapping(value="/usr/v1/infra/member/memberUsrLogoutProc")
-//		public Map<String, Object> signoutXdmProc(HttpSession httpSession) {
-//			Map<String, Object> returnMap = new HashMap<String, Object>();
-//			httpSession.invalidate();
-//			returnMap.put("rt", "success");
-//			return returnMap;
-//		}
-//	
-	
-	
-	
+
+
 	
 	 //UPDATE 축약형
     @RequestMapping(value="/xdm/v1/infra/member/memberXdmMfom")
