@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
@@ -13,6 +14,25 @@ public class MemberService {
 	
 	@Autowired
 	private MemberDao memberDao;
+	
+    // usrInsert 메서드 정의
+    public int usrInsert(MemberDto memberDto) {
+        // BCryptPasswordEncoder 객체 생성
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        
+        // 입력된 비밀번호 확인
+        System.out.println("Original Password: " + memberDto.getIfmmPassword());
+
+        // 비밀번호를 암호화하여 memberDto 객체에 설정
+        String encodedPassword = encoder.encode(memberDto.getIfmmPassword());
+        
+        System.out.println("Encoded Password: " + encodedPassword);
+        
+        memberDto.setIfmmPassword(encodedPassword);
+
+        // 암호화된 비밀번호를 포함하여 회원 정보를 저장
+        return memberDao.insert(memberDto);
+    }
 	
 //	public List<MemberDto> selectList(){
 //		List<MemberDto> members = MemberDao.selectList();

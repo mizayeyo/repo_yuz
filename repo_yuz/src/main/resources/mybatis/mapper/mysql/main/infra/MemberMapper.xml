@@ -195,7 +195,7 @@
 		WHERE
 			1 = 1
 			AND a.ifmmId = #{ifmmId}
-			AND a.ifmmPassword = #{ifmmPassword}
+<!-- 			AND a.ifmmPassword = #{ifmmPassword} -->
 	</select>		
 	
 		

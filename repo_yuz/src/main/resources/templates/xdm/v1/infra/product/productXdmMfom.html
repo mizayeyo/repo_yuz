@@ -522,7 +522,7 @@
           <li class="breadcrumb-item">page2</li>
           <li class="breadcrumb-item active">Default</li>
         </ol>
-        <p class="p1">Product Form</p1>
+        <p class="p1">Product Mfom</p1>
       </nav>
     </div><!-- End Page Title -->
     <section class="section">
@@ -531,20 +531,20 @@
           <div class="card card-1 " >
             <div class="card-body border">
               <h5 class="card-title">기본정보</h5>
-        <form name="form" class="row g-3 needs-validation" method="post" action="/xdm/v1/infra/product/productXdmInst" novalidate>
+        <form name="form" class="row g-3 needs-validation" method="post" action="/xdm/v1/infra/product/productXdmUpdt" novalidate>
           <div class="row g-2">
                 <div class="col-sm-12 col-md-6 col-lg-3">
                   <label for="code" class="form-label mb-0">제품번호 <font color="red"><strong>*</strong></font></label>
-                  <input type="text" class="form-control" id="ifpdSeq" name="ifpdSeq" placeholder="자동생성" style="background-color:lightgray;" disabled>
+                  <input type="text" class="form-control" id="ifpdSeq" name="ifpdSeq"
+                  th:value="${item?.ifpdSeq}"  placeholder="자동생성" style="background-color:lightgray;" required>
                 </div>
-               
                 <div class="col-sm-12 col-md-6 col-lg-3">
                   <label class="form-label mb-0">제품명</label>
-                  <input type="text" class="form-control"  name="ifpdName" id="ifpdName" placeholder="제품명을 입력하세요" required>
+                  <input type="text" class="form-control"  name="ifpdName" id="ifpdName" th:value="${item?.ifpdName}" placeholder="제품명을 입력하세요" required>
                 </div>
                  <div class="col-sm-12 col-md-6 col-lg-3">
                   <label class="form-label mb-0">제품가격</label>
-                  <input type="text" class="form-control"  name="ifpdPrice" id="ifpdPrice" placeholder="제품가격을 입력하세요" required>
+                  <input type="text" class="form-control"  name="ifpdPrice" id="ifpdPrice" th:value="${item?.ifpdPrice}" placeholder="제품가격을 입력하세요" required>
                 </div>
                 </div>
                 <div class="row g-2">
@@ -552,10 +552,10 @@
                 <div class="row g-2">
                   <div class="col-sm-12 col-md-6 col-lg-3">
                     <label class="form-label mb-0">사용여부 <font color="red"><strong>*</strong></font></label>
-                    <select class="form-select" id="ifpdUseNy" name="ifpdUseNy" required>
+                    <select class="form-select" id="ifpdUseNy" name="ifpdUseNy" th:value="${item?.ifpdUseNy}" required>
                                 <option selected disable value="">사용여부</option>
-                                <option value="1">Y</option>
-                                <option value="0">N</option>
+                                <option value="1" th:selected="${item?.ifpdUseNy == 1}">Y</option>
+											<option value="2" th:selected="${item?.ifpdUseNy == 0}">N</option>
                               </select>
                   </div>
 <!--                    <div class="col-sm-12 col-md-6 col-lg-3"> -->
@@ -587,14 +587,23 @@
                     <div class="row g-2">
                     <div class="col-sm-12 col-md-6 col-lg-3">
                     <label class="form-label mb-0">삭제여부 <font color="red"><strong>*</strong></font></label>
-                    <select class="form-select" id="ifpdDelNy" name="ifpdDelNy" required>
-                                <option selected disable value="">삭제여부</option>
-                                <option value="1">Y</option>
-                                <option value="0">N</option>
+                    <select class="form-select" id="ifpdDelNy" name="ifpdDelNy" disabled>
+<!--                                 <option selected disable value="">삭제여부</option> -->
+                                <option value="1" th:selected="${item?.ifpdDelNy == 1}">Y</option>
+											<option value="2" th:selected="${item?.ifpdDelNy == 0}">N</option>
                               </select>
                            
                   </div>
-                
+                  <div class="col-sm-12 col-md-6 col-lg-3">
+                  <label class="form-label mb-0">등록날짜</label>
+                  <input type="datetime" class="form-control" name="ifpdReg" 
+                  		th:value="${#dates.format(item?.ifpdUpdate, 'yyyy-MM-dd HH:mm:ss')}" >
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                  <label class="form-label mb-0">수정날짜</label>
+                  <input type="datetime" class="form-control"  name="ifpdUpdate" 
+                  		th:value="${#dates.format(item?.ifpdReg, 'yyyy-MM-dd HH:mm:ss')}" >
+                </div>
                 </div>
                     
 						 <div class="row g-2">
@@ -657,9 +666,8 @@
 	
 	document.getElementById("btnSubmit").onclick = function () {
 	
-		
 	
-		form.action = "/xdm/v1/infra/product/productXdmInst";
+		form.action = "/xdm/v1/infra/product/productXdmUpdt";
 		form.submit();
 		
 	}

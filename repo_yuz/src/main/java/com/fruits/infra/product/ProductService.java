@@ -20,14 +20,7 @@ public class ProductService {
 				
 		}
 		
-		
-		//selectListCode
-		//code - codegroup 연결
-//		public List<ProductDto> selectListProduct(){
-////			
-//			return productDao.selectListProduct();
-//		}
-//		
+
 		//insert
 		public int insert(ProductDto productDto) {
 			return productDao.insert(productDto);
@@ -39,10 +32,16 @@ public class ProductService {
 		}
 		
 		//update
-		public int update(ProductDto productdto) {
-			return productDao.update(productdto);
-		}
+//		public int update(ProductDto productdto) {
+//			return productDao.update(productdto);
+//		}
 		
+		//update축약형
+		public int update(ProductDto productDto) {
+			System.out.println(productDto.getIfpdSeq());
+			return productDao.update(productDto);
+		}
+//		
 		//uelete
 		public int uelete(ProductDto productDto) {
 			return productDao.uelete(productDto);

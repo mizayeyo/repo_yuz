@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -45,12 +46,22 @@ public class MemberController {
 	}
 	
 	
+	
+	
 	//유저 메인 페이지
 	@RequestMapping(value="/usr/v1/infra/member/memberUsrMain")
 	public String memberUsrMain() {
 		return "usr/v1/infra/member/memberUsrMain";
 	}
 	
+	//유저 프로필
+	@RequestMapping(value="usr/v1/infra/member/memberUsrProfile")
+	public String memberUsrProfile() {
+		return "usr/v1/infra/member/memberUsrProfile";
+	}
+	
+	
+	//INSERT
 	@RequestMapping(value="/xdm/v1/infra/member/memberXdmInst")
 	public String memberXdmInst(MemberDto memberDto) {
 		
@@ -58,6 +69,9 @@ public class MemberController {
 		
 		memberService.insert(memberDto);
 		
+		//==회원가입시 비밀번호 암호화==
+//		memberDto.setIfmmPassword(encodeBcrypt(memberDto.getIfmmPassword(),10));
+//		memberService.usrInsert(memberDto);
 		return "redirect:/xdm/v1/infra/member/memberXdmList";
 	}
 	
@@ -91,7 +105,7 @@ public class MemberController {
 	
 	@RequestMapping(value="/usr/v1/infra/member/memberUsrInst")
 	public String memberUsrInst(MemberDto memberDto) {
-		
+		memberDto.setIfmmPassword(encodeBcrypt(memberDto.getIfmmPassword(), 10));
 		memberService.insert(memberDto);
 	
 		return "/usr/v1/infra/member/memberUsrLogin";
@@ -143,7 +157,11 @@ public class MemberController {
 		
 		if(rtMember !=null) { //객체를 대상으로 null을 검사
 			
+			if(matchesBcrypt(memberDto.getIfmmPassword(), rtMember.getIfmmPassword(), 10)) {
+			
 			MemberDto rtMember2 = memberService.memberSlectOneId(memberDto); //로그인 후 세션 정보 저장
+			
+			
 			
 			if(rtMember2 !=null) {
 				//세션값 저장
@@ -155,6 +173,7 @@ public class MemberController {
 			returnMap.put("rt", "success"); //성공 응답 설정
 			
 				// 저장된 세션값 확인
+				System.out.println("???????????????????:" + memberDto.getIfmmPassword());
 				System.out.println("sessSeqXdm:" + httpSession.getAttribute("sessSeqXdm"));
 				System.out.println("sessIdXdm:" + httpSession.getAttribute("sessIdXdm"));
 				System.out.println("sessNameXdm:" + httpSession.getAttribute("sessNameXdm"));
@@ -162,7 +181,7 @@ public class MemberController {
 		} else {
 			returnMap.put("rt", "fail"); //실패 응답 설정
 		}
-		
+		}
 		return returnMap;
 	}
 	
@@ -213,6 +232,17 @@ public class MemberController {
   	  return "redirect:/xdm/v1/infra/member/memberXdmList";
     }
     
-    
+ // ===== 암호화 ===== //
+ 	// encodeBcrypt
+ 	public String encodeBcrypt(String planeText, int strength) {
+ 		return new BCryptPasswordEncoder(strength).encode(planeText);
+ 	}
+ 	
+ 	// matchesBcrypt
+ 	public boolean matchesBcrypt(String planeText, String hashValue, int strength) {
+ 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(strength);
+ 		return passwordEncoder.matches(planeText, hashValue);
+ 	}
+
 
 }

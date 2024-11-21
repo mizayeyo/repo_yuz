@@ -21,24 +21,13 @@
 	rel="stylesheet">
 
 <!-- Vendor CSS Files -->
-<link
-	href="/xdm/v1/template/admin/assets/vendor/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet">
-<link
-	href="/xdm/v1/template/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css"
-	rel="stylesheet">
-<link
-	href="/xdm/v1/template/admin/assets/vendor/boxicons/css/boxicons.min.css"
-	rel="stylesheet">
-<link href="/xdm/v1/template/admin/assets/vendor/quill/quill.snow.css"
-	rel="stylesheet">
-<link href="/xdm/v1/template/admin/assets/vendor/quill/quill.bubble.css"
-	rel="stylesheet">
-<link
-	href="/xdm/v1/template/admin/assets/vendor/remixicon/remixicon.css"
-	rel="stylesheet">
-<link href="/xdm/v1/assets/vendor/simple-datatables/style.css"
-	rel="stylesheet">
+<link href="/xdm/v1/template/admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/xdm/v1/template/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="/xdm/v1/template/admin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="/xdm/v1/template/admin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+<link href="/xdm/v1/template/admin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+<link href="/xdm/v1/template/admin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="/xdm/v1/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="/xdm/v1/template/admin/assets/css/style.css"
@@ -590,7 +579,6 @@
 													<th>번호</th>
 													<th>이름</th>
 													<th>아이디</th>
-													<th>비밀번호</th>
 													<th>닉네임</th>
 													<th>생일</th>
 													<th>삭제여부</th>
@@ -620,7 +608,6 @@
 														th:href="@{/xdm/v1/infra/member/memberXdmMfom(ifmmSeq=${list.ifmmSeq})}"
 														th:text="${list.ifmmName}"></a></td>
 													<td th:text="${list.ifmmId}"></td>
-													<td th:text="${list.ifmmPassword}"></td>
 													<td th:text="${list.ifmmNickName}"></td>
 													<td
 														th:text="${#dates.format(list.ifmmBirthday, 'yyyy-MM-dd')}"></td>

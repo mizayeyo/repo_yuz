@@ -43,5 +43,7 @@ public interface MemberDao {
 	// for cache
 	public List<MemberDto> selectListCachedMemberArrayList();
 	
+	
+	
 
 }

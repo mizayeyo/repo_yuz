@@ -19,8 +19,8 @@
 		<if test="shUseNy !=null and !shUseNy.equals('')">AND ifpdUseNy = #{shUseNy}</if>
 		<!--날짜 검색 -->
 		<choose>
-			<when test="shOptionDate == 1">AND a.ifpdRegist BETWEEN #{shDateStart} AND #{shDateEnd}</when>
-			<when test="shOptionDate == 2">AND a.ifpdEdit BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+			<when test="shOptionDate == 1">AND a.ifpdReg BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+			<when test="shOptionDate == 2">AND a.ifpdUpdate BETWEEN #{shDateStart} AND #{shDateEnd}</when>
 		</choose>
 
 		<!--조건&검색어 검색 -->
@@ -40,12 +40,13 @@
 			SELECT
 				a.ifpdSeq,
 				a.ifpdName,
+				a.ifpdPrice,
 				a.ifpdUseNy,
 				a.ifpdDesc,
 				a.ifpdDelNy,
 				a.ifpdReg,
 				a.ifpdUpdate,
-				(SELECT count(ifpdSeq) FROM product WHERE 1 = 1) AS xifpdSeqCount 
+(SELECT count(ifpdSeq) FROM product AS a WHERE 1 = 1 ANd a.ifpdSeq = a.ifpdSeq) AS xifpdSeqCount
 				<include refid="selectCommon"/>
 			ORDER BY
 				a.ifpdSeq DESC
@@ -53,39 +54,45 @@
 	
 	</select>
 	
+	
+	
+	
+	
 	<insert id="insert">
 		INSERT INTO product(
 			ifpdName,
+			ifpdPrice,
 			ifpdUseNy,
 			ifpdDesc,
 			ifpdDelNy,
 			ifpdReg,
-			ifpdUpdate,
-			member_ifmmSeq
+			ifpdUpdate
 		)VALUES(
 		#{ifpdName},
+		#{ifpdPrice},
 		#{ifpdUseNy},
 		#{ifpdDesc},
 		#{ifpdDelNy},
 		now(),
-		now(),
-		#{member_ifmmSeq}
+		now()
 		
 	)
-	<selectKey resultType="String" keyProperty="ifpdSeq" order="AFTER">
-				SELECT last_insert_id()
-</selectKey>
+<!-- 	<selectKey resultType="String" keyProperty="ifpdSeq" order="AFTER"> -->
+<!-- 				SELECT last_insert_id() -->
+<!-- </selectKey> -->
 
 	</insert>
 	
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
+			ifpdSeq,
 			ifpdName,
+			ifpdPrice,
 			ifpdUseNy,
 			ifpdDesc,
 			ifpdDelNy,
 			ifpdReg,
-			ifpdUpdate,
+			ifpdUpdate
 			
 		FROM
 			yuz.product 
@@ -99,12 +106,17 @@
 		UPDATE yuz.product
 		SET
 			ifpdName = #{ifpdName},
+			ifpdPrice = #{ifpdPrice},
 			ifpdUseNy = #{ifpdUseNy},
 			ifpdDesc = #{ifpdDesc},
-			ifpdDelNy = #{ifpdDelNy}
+			ifpdDelNy = 0,
+			ifpdUpdate = now()
 		WHERE 1 = 1
 			AND ifpdSeq = #{ifpdSeq}	
 	</update>
+	
+	
+	
 	
 	  <update id="uelete">
 	  		UPDATE yuz.product
