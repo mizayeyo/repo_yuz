@@ -34,7 +34,7 @@ public class MemberDto {
 	
 	private String xdmId;
 	private String xdmPw;
-	private String ifmmTelCom;
+	private Integer ifmmTelCom;
 	
 	
 //cache
@@ -128,7 +128,7 @@ public class MemberDto {
 		return xdmPw;
 	}
 
-	public String getIfmmTelCom() {
+	public Integer getIfmmTelCom() {
 		return ifmmTelCom;
 	}
 
@@ -220,9 +220,10 @@ public class MemberDto {
 		this.xdmPw = xdmPw;
 	}
 
-	public void setIfmmTelCom(String ifmmTelCom) {
+	public void setIfmmTelCom(Integer ifmmTelCom) {
 		this.ifmmTelCom = ifmmTelCom;
 	}
+
 
 	
 

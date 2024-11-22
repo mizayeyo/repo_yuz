@@ -150,7 +150,7 @@
 			    ifmmAddress2 = #{ifmmAddress2},
 			    ifmmPostCode = #{ifmmPostCode},
 			    ifmmTel = #{ifmmTel},
-			    ifmmTel = #{ifmmTelCom},
+			    ifmmTelCom = #{ifmmTelCom},
 			    ifmmMemo = #{ifmmMemo}
 		WHERE 1 = 1
 			AND ifmmSeq = #{ifmmSeq}	

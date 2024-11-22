@@ -1,0 +1,53 @@
+<!-- <th:block th:replace="~{/usr/v1/infra/include/includeHead :: head}"></th:block> -->
+<!-- head start -->
+<th:block th:fragment="head">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="INSPIRO" />
+<meta name="description"
+	content="Themeforest Template Polo, html template">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Document title -->
+<title>N.no New World</title>
+<!-- Stylesheets & Fonts -->
+<link href="/usr/v1/css/plugins.css" rel="stylesheet">
+<link href="/usr/v1/css/style.css" rel="stylesheet">
+
+
+<!-- CSS for dropdown menu styling -->
+<style>
+.user-menu {
+	position: relative; /* 부모 요소를 기준으로 하단 메뉴가 나타나게 설정 */
+}
+
+.dropdown-content {
+	position: absolute;
+	top: 1% !important; /* 유저 이름 바로 아래에 메뉴가 나타나도록 설정 */
+	left: 0 !important; /* 유저 이름과 정렬되게 설정 */
+	background-color: white;
+	min-width: 120px;
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	border: 1px solid #ddd;
+}
+
+.dropdown-content li {
+	list-style: none;
+}
+
+.dropdown-content li a {
+	color: black;
+	padding: 8px 12px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content li a:hover {
+	background-color: #ddd;
+}
+</style>
+	</head>
+
+</th:block>

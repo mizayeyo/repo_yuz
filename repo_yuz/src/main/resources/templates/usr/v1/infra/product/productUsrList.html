@@ -1,34 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="https://www.thymeleaf.org">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="INSPIRO" />
-    <meta name="description" content="Themeforest Template Polo, html template">
-    <link rel="icon" type="image/png" href="/usr/v1/template/images/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Document title -->
-    <title>N.no New World</title>
-    <!-- Stylesheets & Fonts -->
-    <link href="/usr/v1/css/plugins.css" rel="stylesheet">
-    <link href="/usr/v1/css/style.css" rel="stylesheet">
-    <!-- Google Fonts -->
-<link href="https://fonts.gstatic.com" rel="preconnect">
-<link
-	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-	rel="stylesheet">
-
-<!-- Vendor CSS Files -->
-<link href="/xdm/v1/template/admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Template Main CSS File -->
-<link href="/xdm/v1/template/admin/assets/css/style.css" rel="stylesheet">
-
-<!-- by developer -->
-<link rel="stylesheet" href="/xdm/v1/css/datetimepicker/jquery.datetimepicker.min.css" />
-    
-</head>
+<!-- head S -->
+<th:block th:replace="~{/usr/v1/infra/include/includeHead :: head}"></th:block>
+<!-- head E -->
 
 <body>
     <!-- Body Inner -->

@@ -1,0 +1,154 @@
+<!-- <th:block th:replace="~{/xdm/v1/infra/include/includeSide :: aside}"></th:block> -->
+<th:block th:fragment="includeSide">
+	<!-- ======= Sidebar ======= -->
+	<aside id="sidebar" class="sidebar">
+		<ul class="sidebar-nav" id="sidebar-nav">
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="index.html"> <i class="bi bi-grid"></i> <span>Dashboard</span>
+			</a></li>
+			<!-- End Dashboard Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+					<i class="bi bi-menu-button-wide"></i><span>CODE</span><i
+					class="bi bi-chevron-down ms-auto"></i>
+			</a>
+				<ul id="components-nav" class="nav-content collapse "
+					data-bs-parent="#sidebar-nav">
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/code/codeXdmList"> <i
+							class="bi bi-circle"></i><span>CodeList</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/code/codeXdmForm"> <i
+							class="bi bi-circle"></i><span>CodeForm</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/code/codeXdmMfom"> <i
+							class="bi bi-circle"></i><span>CodeMfom</span>
+					</a></li>
+				</ul></li>
+			<!-- End Components Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+					<i class="bi bi-journal-text"></i><span>CODE GROUP</span><i
+					class="bi bi-chevron-down ms-auto"></i>
+			</a>
+				<ul id="forms-nav" class="nav-content collapse "
+					data-bs-parent="#sidebar-nav">
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/codegroup/codeGroupXdmList">
+							<i class="bi bi-circle"></i><span>CodeGroupList</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/codegroup/codeGroupXdmForm">
+							<i class="bi bi-circle"></i><span>CodeGroupForm</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/codegroup/codeGroupXdmMfom">
+							<i class="bi bi-circle"></i><span>CodeGroupMfom</span>
+					</a></li>
+				</ul></li>
+			<!-- End Forms Nav -->
+			<li class="nav-item"><a class="nav-link "
+				data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+					<i class="bi bi-layout-text-window-reverse"></i><span>MEMBER</span><i
+					class="bi bi-chevron-down ms-auto"></i>
+			</a>
+				<ul id="tables-nav" class="nav-content collapse show"
+					data-bs-parent="#sidebar-nav">
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/member/memberXdmLogin">
+							<i class="bi bi-circle"></i><span>MemberLogin</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/member/memberXdmIndex"
+						class="active"> <i class="bi bi-circle"></i><span>MemberIndex</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/member/memberXdmList"
+						class="active"> <i class="bi bi-circle"></i><span>MemberList</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/member/memberXdmForm"
+						class="active"> <i class="bi bi-circle"></i><span>MemberForm</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/member/memberXdmMfom"
+						class="active"> <i class="bi bi-circle"></i><span>MemberMfom</span>
+					</a></li>
+				</ul></li>
+			<!-- End Tables Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+					<i class="bi bi-bar-chart"></i><span>PRODUCT</span><i
+					class="bi bi-chevron-down ms-auto"></i>
+			</a>
+				<ul id="charts-nav" class="nav-content collapse "
+					data-bs-parent="#sidebar-nav">
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/product/productXdmList">
+							<i class="bi bi-circle"></i><span>ProductList</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/product/productXdmForm">
+							<i class="bi bi-circle"></i><span>ProductForm</span>
+					</a></li>
+					<li><a
+						href="http://localhost:8080/xdm/v1/infra/product/productXdmMfom">
+							<i class="bi bi-circle"></i><span>ProductMfom</span>
+					</a></li>
+				</ul></li>
+			<!-- End Charts Nav -->
+<!-- 			<li class="nav-item"><a class="nav-link collapsed" -->
+<!-- 				data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#"> -->
+<!-- 					<i class="bi bi-gem"></i><span>Icons</span><i -->
+<!-- 					class="bi bi-chevron-down ms-auto"></i> -->
+<!-- 			</a> -->
+<!-- 				<ul id="icons-nav" class="nav-content collapse " -->
+<!-- 					data-bs-parent="#sidebar-nav"> -->
+<!-- 					<li><a href="icons-bootstrap.html"> <i -->
+<!-- 							class="bi bi-circle"></i><span>Bootstrap Icons</span> -->
+<!-- 					</a></li> -->
+<!-- 					<li><a href="icons-remix.html"> <i class="bi bi-circle"></i><span>Remix -->
+<!-- 								Icons</span> -->
+<!-- 					</a></li> -->
+<!-- 					<li><a href="icons-boxicons.html"> <i class="bi bi-circle"></i><span>Boxicons</span> -->
+<!-- 					</a></li> -->
+<!-- 				</ul></li> -->
+			<!-- End Icons Nav -->
+			<li class="nav-heading">USER</li>
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="users-profile.html"> <i class="bi bi-person"></i> <span>Profile</span>
+			</a></li>
+			<!-- End Profile Page Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="pages-faq.html"> <i class="bi bi-question-circle"></i> <span>F.A.Q</span>
+			</a></li>
+			<!-- End F.A.Q Page Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="pages-contact.html"> <i class="bi bi-envelope"></i> <span>Contact</span>
+			</a></li>
+			<!-- End Contact Page Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="http://localhost:8080/usr/v1/infra/member/memberUsrRegist">
+					<i class="bi bi-card-list"></i> <span>UsrRegist</span>
+			</a></li>
+			<!-- End Register Page Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="http://localhost:8080/usr/v1/infra/member/memberUsrLogin">
+					<i class="bi bi-box-arrow-in-right"></i> <span>UsrLogin</span>
+			</a></li>
+			<!-- End Login Page Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="pages-error-404.html"> <i class="bi bi-dash-circle"></i> <span>Error
+						404</span>
+			</a></li>
+			<!-- End Error 404 Page Nav -->
+			<li class="nav-item"><a class="nav-link collapsed"
+				href="pages-blank.html"> <i class="bi bi-file-earmark"></i> <span>Blank</span>
+			</a></li>
+			<!-- End Blank Page Nav -->
+		</ul>
+	</aside>
+	<!-- End Sidebar-->
+</th:block>
