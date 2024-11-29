@@ -1,69 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="author" content="INSPIRO" />
-    <meta name="description" content="Themeforest Template Polo, html template">
-    <link rel="icon" type="image/png" href="/usr/v1/template/images/favicon.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Document title -->
-    <title>N.no New World</title>
-    <!-- Stylesheets & Fonts -->
-    <link href="/usr/v1/css/plugins.css" rel="stylesheet">
-    <link href="/usr/v1/css/style.css" rel="stylesheet">
-</head>
-
+<!-- Head Start -->
+<th:block th:replace="~{/usr/v1/infra/include/includeHead :: head}"></th:block>
+<!-- Head END -->
 <body>
-    <!-- Body Inner -->
-    <div class="body-inner">
-        <!-- Header -->
-        <header id="header" class="header-always-fixed">
-            <div class="header-inner">
-                <div class="container">
-                    <!--Logo-->
-                    <div id="logo">
-                        <a href="http://127.0.0.1:5500/html/n.no/01_index.html">
-                            <span class="logo-default">N.no</span>
-                            <span class="logo-dark">N.no</span>
-                        </a>
-                    </div>
-                    <!--End: Logo-->
-                    <!--Navigation-->
-                    <div id="mainMenu">
-                        <div class="container">
-                            <nav>
-                                <ul>
-                                    <li><a href="http://127.0.0.1:5500/html/n.no/01_index.html">Home</a></li>
-                                    <li class="dropdown"><a href="http://127.0.0.1:5500/html/n.no/02_blog-1.html">브랜드
-                                            소개</a>
-                                    </li>
-                                    <li class="dropdown"><a
-                                            href="http://127.0.0.1:5500/html/n.no/03_blog-filter.html">이벤트</a>
-                                    </li>
-                                    <li class="dropdown mega-menu-item"><a
-                                            href="http://127.0.0.1:5500/html/n.no/04_blog-2.html">제품정보</a>
-                                    </li>
-                                    <li class="dropdown"><a href="http://127.0.0.1:5500/html/n.no/09_shop-columns-4.html">제품구매</a>
-                                    </li>
-                                    <li class="dropdown mega-menu-item"><a href="http://127.0.0.1:5500/html/n.no/10_shortcode-tables.html">Review</a>
-                                    </li>
-                                    <li class="dropdown mega-menu-item"><a href="http://127.0.0.1:5500/html/n.no/05_shortcode-tables.html">Q&A</a>
-                                    </li>
-                                    <li class="dropdown mega-menu-item"><a href="http://127.0.0.1:5500/html/n.no/06_page-user-login.html">로그인</a>
-                                    </li>
-                                    <li class="dropdown mega-menu-item"><a href="http://127.0.0.1:5500/html/n.no/07_page-user-register.html">회원가입</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <!--end: Navigation-->
-                </div>
-            </div>
-        </header>
-        <!-- end: Header -->
+<!-- Start Header -->
+	<th:block th:replace="~{/usr/v1/infra/include/includeHeader :: header}"></th:block>
+	<!-- End Header -->
        <!-- SHOP PRODUCT PAGE -->
         <section id="product-page" class="product-page p-b-0">
             <div class="container">

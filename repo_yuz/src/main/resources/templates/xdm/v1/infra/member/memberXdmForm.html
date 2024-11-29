@@ -6,15 +6,13 @@
 <!-- Head END -->
 <body>
 
-<body>
-
 	<!-- Start Header -->
-  <th:block th:replace="~{/xdm/v1/infra/include/includeHeader :: header}"></th:block>
-  <!-- End Header -->
-  
-  <!-- Side bar -->
-  <th:block th:replace="~{/xdm/v1/infra/include/includeSide :: aside}"></th:block>
-  <!-- End Side bar-->
+	<th:block th:replace="~{/xdm/v1/infra/include/includeHeader :: header}"></th:block>
+	<!-- End Header -->
+
+	<!-- Side bar -->
+	<th:block th:replace="~{/xdm/v1/infra/include/includeSide :: aside}"></th:block>
+	<!-- End Side bar-->
 	<main id="main" class="main">
 
 		<div class="pagetitle">
@@ -46,7 +44,7 @@
 											placeholder="자동생성" style="background-color: lightgray;"
 											disabled>
 									</div>
-								<div class="col-sm-12 col-md-3 col-lg-3">
+									<div class="col-sm-12 col-md-3 col-lg-3">
 										<label class="form-label mb-0">이름<font color="red"><strong>*</strong></font></label>
 										<input type="text" class="form-control" name="ifmmName"
 											th:value="${item?.ifmmName}" id="ifmmName" placeholder="이름"
@@ -64,9 +62,9 @@
 											th:value="${item?.ifmmId}" id="ifmmId"
 											placeholder="아이디를 입력해 주세요" required>
 									</div>
-									</div>
-									<div class="row g-2">
-										<div class="col-sm-12 col-md-3 col-lg-3">
+								</div>
+								<div class="row g-2">
+									<div class="col-sm-12 col-md-3 col-lg-3">
 										<label class="form-label mb-0">닉네임<font color="red"><strong>*</strong></font></label>
 										<input type="text" class="form-control" name="ifmmNickName"
 											th:value="${item?.ifmmNickName}" id="ifmmNickName"
@@ -79,10 +77,11 @@
 											th:value="${item?.ifmmPassword}" placeholder="비밀번호를 입력해 주세요"
 											required>
 									</div>
-								<div class="row g-2">
-								<div class="form-group col-md-3">
+									<div class="row g-2">
+										<div class="form-group col-md-3">
 											<label for="TelCom">통신사</label> <select class="form-select"
-												name="ifmmTelCom" id="ifmmTelCom" th:value="${item?.ifmmTelCom}" required>
+												name="ifmmTelCom" id="ifmmTelCom"
+												th:value="${item?.ifmmTelCom}" required>
 												<option selected disable value="">통신사</option>
 												<option value="1">SKT</option>
 												<option value="2">KT</option>
@@ -91,94 +90,94 @@
 												<option value="5">기타</option>
 											</select>
 										</div>
-									<div class="col-sm-12 col-md-3 col-lg-3">
-										<label class="form-label mb-0">전화번호<font color="red"><strong>*</strong></font></label>
-										<input type="text" class="form-control" name="ifmmTel"
-											th:value="${item?.ifmmTel}" id="ifmmTel"
-											placeholder="전화번호를 입력해 주세요" required>
-									</div>
-									<div class="form-group col-md-3">
+										<div class="col-sm-12 col-md-3 col-lg-3">
+											<label class="form-label mb-0">전화번호<font color="red"><strong>*</strong></font></label>
+											<input type="text" class="form-control" name="ifmmTel"
+												th:value="${item?.ifmmTel}" id="ifmmTel"
+												placeholder="전화번호를 입력해 주세요" required>
+										</div>
+										<div class="form-group col-md-3">
 											<label for="userBirthday">생년월일</label> <input
-												class="form-control" type="date" name="ifmmBirthday" 
+												class="form-control" type="date" name="ifmmBirthday"
 												id="ifmmBirthday" th:value="${item?.ifmmBirthday}" required>
 										</div>
-									<div class="col-sm-12 col-md-6 col-lg-3">
-										<label class="form-label mb-0">성별 <font color="red"><strong>*</strong></font></label>
-										<select class="form-select" id="ifmmGender" name="ifmmGender"
-											th:value="${item?.ifmmGender}" required>
-											<option selected disable value="">성별을 선택하세요</option>
-											<option value="1" th:selected="${item?.ifmmGender == 1}">남성</option>
-											<option value="2" th:selected="${item?.ifmmGender == 2}">여성</option>
-										</select>
-									</div>
-								</div>
-								<div class="row g-2">
-									<div class="col-sm-12 col-md-3 col-lg-3 d-flex">
-										<div class="w-100">
-											<label class="form-label mb-0">우편번호<font color="red"><strong>*</strong></font></label>
-											<input type="text" class="form-control" name="ifmmPostCode"
-												th:value="${item?.ifmmPostCode}" id="sample6_postcode"
-												placeholder="우편번호" required>
+										<div class="col-sm-12 col-md-6 col-lg-3">
+											<label class="form-label mb-0">성별 <font color="red"><strong>*</strong></font></label>
+											<select class="form-select" id="ifmmGender" name="ifmmGender"
+												th:value="${item?.ifmmGender}" required>
+												<option selected disable value="">성별을 선택하세요</option>
+												<option value="1" th:selected="${item?.ifmmGender == 1}">남성</option>
+												<option value="2" th:selected="${item?.ifmmGender == 2}">여성</option>
+											</select>
 										</div>
-										<button type="button" class="btn btn-secondary col-3 ms-2 "
-											style="height: calc(1.5em + .75rem + 2px); margin-top: 23px;"
-											onclick="sample6_execDaumPostcode()">검색</button>
 									</div>
-									<div class="col-sm-12 col-md-3 col-lg-3">
-										<label class="form-label mb-0">주소<font color="red"><strong>*</strong></font></label>
-										<input type="text" class="form-control" name="ifmmAddress1"
-											th:value="${item?.ifmmAddress1}" id="sample6_address"
-											placeholder="주소" required readonly>
-									</div>
-									<div class="col-sm-12 col-md-3 col-lg-3">
-										<label class="form-label mb-0">상세주소</label> <input type="text"
-											class="form-control" name="ifmmAddress2"
-											th:value="${item?.ifmmAddress2}" id="sample6_detailAddress"
-											placeholder="상세주소" required>
-									</div>
-								</div>
 									<div class="row g-2">
-									<div class="col-sm-6 col-md-6 col-lg-6">
-										<label class="form-label mb-0">설명</label>
-										<textarea class="form-control" name="ifmmMemo" id="ifmmMemo"
-											th:text="${item?.ifmmMemo}" rows="3"></textarea>
+										<div class="col-sm-12 col-md-3 col-lg-3 d-flex">
+											<div class="w-100">
+												<label class="form-label mb-0">우편번호<font color="red"><strong>*</strong></font></label>
+												<input type="text" class="form-control" name="ifmmPostCode"
+													th:value="${item?.ifmmPostCode}" id="sample6_postcode"
+													placeholder="우편번호" required>
+											</div>
+											<button type="button" class="btn btn-secondary col-3 ms-2 "
+												style="height: calc(1.5em + .75rem + 2px); margin-top: 23px;"
+												onclick="sample6_execDaumPostcode()">검색</button>
+										</div>
+										<div class="col-sm-12 col-md-3 col-lg-3">
+											<label class="form-label mb-0">주소<font color="red"><strong>*</strong></font></label>
+											<input type="text" class="form-control" name="ifmmAddress1"
+												th:value="${item?.ifmmAddress1}" id="sample6_address"
+												placeholder="주소" required readonly>
+										</div>
+										<div class="col-sm-12 col-md-3 col-lg-3">
+											<label class="form-label mb-0">상세주소</label> <input
+												type="text" class="form-control" name="ifmmAddress2"
+												th:value="${item?.ifmmAddress2}" id="sample6_detailAddress"
+												placeholder="상세주소" required>
+										</div>
 									</div>
-								</div>
-								<div class="row g-2">
-									<div class="col-sm-12 col-md-6 col-lg-3">
-										삭제여부 <label class="form-label mb-0"></label> <select
-											class="form-select" name="ifmmDelNy" id="ifmmDelNy" readonly>
-											<option value="1" th:selected="${item?.ifmmDelNy == 1}">Y</option>
-											<option value="0" th:selected="${item?.ifmmDelNy == 0}">N</option>
-										</select>
+									<div class="row g-2">
+										<div class="col-sm-6 col-md-6 col-lg-6">
+											<label class="form-label mb-0">설명</label>
+											<textarea class="form-control" name="ifmmMemo" id="ifmmMemo"
+												th:text="${item?.ifmmMemo}" rows="3"></textarea>
+										</div>
 									</div>
-									<div class="col-sm-12 col-md-6 col-lg-3">
-										<label class="form-label mb-0">등록날짜</label> <input
-											type="datetime" class="form-control" name="ifmmRegistDate"
-											th:value="${#dates.format(item?.ifmmRegistDate, 'yyyy-MM-dd HH:mm:ss')}"
-											disabled>
+									<div class="row g-2">
+										<div class="col-sm-12 col-md-6 col-lg-3">
+											삭제여부 <label class="form-label mb-0"></label> <select
+												class="form-select" name="ifmmDelNy" id="ifmmDelNy" readonly>
+												<option value="1" th:selected="${item?.ifmmDelNy == 1}">Y</option>
+												<option value="0" th:selected="${item?.ifmmDelNy == 0}">N</option>
+											</select>
+										</div>
+										<div class="col-sm-12 col-md-6 col-lg-3">
+											<label class="form-label mb-0">등록날짜</label> <input
+												type="datetime" class="form-control" name="ifmmRegistDate"
+												th:value="${#dates.format(item?.ifmmRegistDate, 'yyyy-MM-dd HH:mm:ss')}"
+												disabled>
+										</div>
+										<div class="col-sm-12 col-md-6 col-lg-3">
+											<label class="form-label mb-0">수정날짜</label> <input
+												type="datetime" class="form-control" name="ifmmDeleteDate"
+												th:value="${#dates.format(item?.ifmmDeleteDate, 'yyyy-MM-dd HH:mm:ss')}"
+												disabled>
+										</div>
 									</div>
-									<div class="col-sm-12 col-md-6 col-lg-3">
-										<label class="form-label mb-0">수정날짜</label> <input
-											type="datetime" class="form-control" name="ifmmDeleteDate"
-											th:value="${#dates.format(item?.ifmmDeleteDate, 'yyyy-MM-dd HH:mm:ss')}"
-											disabled>
-									</div>
-								</div>
-								<div class="row g-2">
-									<div class="col">
-										<a
-											href="http://localhost:8080/xdm/v1/infra/member/memberXdmList"
-											class="btn btn-outline-dark"> <i class="bi bi-list-ul"></i>
-										</a>
-									</div>
-									<div class="col d-flex justify-content-end">
+									<div class="row g-2">
+										<div class="col">
+											<a
+												href="http://localhost:8080/xdm/v1/infra/member/memberXdmList"
+												class="btn btn-outline-dark"> <i class="bi bi-list-ul"></i>
+											</a>
+										</div>
+										<div class="col d-flex justify-content-end">
 
-										<button type="button" id="btnSubmit" class="btn btn-primary">
-											<i class="bi bi-server"></i>
-										</button>
+											<button type="button" id="btnSubmit" class="btn btn-primary">
+												<i class="bi bi-server"></i>
+											</button>
+										</div>
 									</div>
-								</div>
 							</form>
 							<!-- End Multi Columns Form -->
 						</div>
@@ -226,7 +225,8 @@
 
 	<!--  by developers -->
 	<script src="/xdm/v1/jquery/jquery-3.7.1.min.js"></script>
-	<script src="/xdm/v1/js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+	<script
+		src="/xdm/v1/js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
 	<script>
 		window.addEventListener('load', function() { // 브라우저에서 페이지가 완전히 로드되었을 때 실행되는 코드
 
@@ -246,8 +246,6 @@
 			form.submit();
 
 		}
-
-		
 	</script>
 	<script
 		src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -292,7 +290,7 @@
 								// 조합된 참고항목을 해당 필드에 넣는다.
 
 							} else {
-								
+
 							}
 
 							// 우편번호와 주소 정보를 해당 필드에 넣는다.

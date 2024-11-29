@@ -11,6 +11,7 @@ public class ProductDto {
 	private String ifpdSeq;
 	private String ifpdName;
 	private String ifpdDesc;
+	private String ifpdImage;
 	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
 	private Date ifpdReg;
 	@DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
@@ -29,8 +30,6 @@ public class ProductDto {
 	
 	
 
-
-
 	public String getIfpdSeq() {
 		return ifpdSeq;
 	}
@@ -43,6 +42,11 @@ public class ProductDto {
 
 	public String getIfpdDesc() {
 		return ifpdDesc;
+	}
+
+
+	public String getIfpdImage() {
+		return ifpdImage;
 	}
 
 
@@ -113,6 +117,11 @@ public class ProductDto {
 
 	public void setIfpdDesc(String ifpdDesc) {
 		this.ifpdDesc = ifpdDesc;
+	}
+
+
+	public void setIfpdImage(String ifpdImage) {
+		this.ifpdImage = ifpdImage;
 	}
 
 

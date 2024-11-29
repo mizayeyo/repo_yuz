@@ -14,6 +14,8 @@ public class ProductService {
 		@Autowired
 		private ProductDao productDao;
 		
+	
+		
 		//selectList
 		public List<ProductDto> selectList(ProductVo productVo){
 			return productDao.selectList(productVo);
@@ -98,6 +100,8 @@ public class ProductService {
 //				return rt;
 //			}
 
+			
 
+			
 
 }

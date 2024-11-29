@@ -16,6 +16,10 @@ public class ProductController {
 	public ProductService productService;
 	
 	
+	
+	
+	
+	
 	//어드민 프로덕트 List
 	@RequestMapping(value="/xdm/v1/infra/product/productXdmList")
 	public String productXdmList(@ModelAttribute("vo") ProductVo productVo, Model model) {
@@ -36,7 +40,7 @@ public class ProductController {
 		return "/xdm/v1/infra/product/productXdmList";
 	}
 	
-	//INSERT
+	// XDM INSERT
 	@RequestMapping(value="/xdm/v1/infra/product/productXdmInst")
 	public String productXdmInst(ProductDto productDto) {
 		
@@ -49,6 +53,21 @@ public class ProductController {
 //		memberService.usrInsert(memberDto);
 		return "redirect:/xdm/v1/infra/product/productXdmList";
 	}
+	
+	// USER INSERT
+	@RequestMapping(value="/usr/v1/infra/product/productUsrInst")
+	public String productUsrInst(ProductDto productDto) {
+		
+		System.out.println(productDto.getIfpdName());
+		
+		productService.insert(productDto);
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+		//==회원가입시 비밀번호 암호화==
+//		memberDto.setIfmmPassword(encodeBcrypt(memberDto.getIfmmPassword(),10));
+//		memberService.usrInsert(memberDto);
+		return "redirect:/usr/v1/infra/product/productUsrList";
+	}
+	
 	
 	//어드민 프로덕트 Form
 	@RequestMapping(value="xdm/v1/infra/product/productXdmForm")
@@ -68,6 +87,12 @@ public class ProductController {
 	public String productUsrDetail() {
 		return "usr/v1/infra/product/productUsrDetail";
 	}
+	
+	//유저 프로덕트 Form
+		@RequestMapping(value="usr/v1/infra/product/productUsrForm")
+		public String productUsrForm() {
+			return "usr/v1/infra/product/productUsrForm";
+		}
 	
 	
 	

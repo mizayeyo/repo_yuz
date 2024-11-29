@@ -102,6 +102,8 @@
 	
 	</select>
 	
+
+	
 	<update id="update">
 		UPDATE yuz.product
 		SET
@@ -146,5 +148,19 @@
 		    AND ifpdUseNy = 1
 	</select>
 
+
+
+    <!-- 모든 상품 조회 -->
+<!--     <select id="selectAllProducts" resultType="com.example.demo.dto.ProductDTO"> -->
+<!--         SELECT id, name, description, price, stock, image_url AS imageUrl, ifpd_image AS ifpdImage -->
+<!--         FROM product -->
+<!--     </select> -->
+
+    <!-- 특정 상품 조회 -->
+<!--     <select id="selectProductById" resultType="com.example.demo.dto.ProductDTO"> -->
+<!--         SELECT id, name, description, price, stock, image_url AS imageUrl, ifpd_image AS ifpdImage -->
+<!--         FROM product -->
+<!--         WHERE id = #{id} -->
+<!--     </select> -->
 	  
 </mapper>

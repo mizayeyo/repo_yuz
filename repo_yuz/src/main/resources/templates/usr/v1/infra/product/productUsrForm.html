@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<!-- Head Start -->
+<th:block th:replace="~{/usr/v1/infra/include/includeHead :: head}"></th:block>
+<!-- Head END -->
+<body>
+	<!-- Start Header -->
+	<th:block th:replace="~{/usr/v1/infra/include/includeHeader :: header}"></th:block>
+	<!-- End Header -->
+
+	<main id="main" class="main">
+		<div class="pagetitle"></div>
+		<!-- End Page Title -->
+		<section class="section">
+			 <div class="row" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+				<div class="col-9">
+					<div class="card card-1 ">
+						<div class="card-body border">
+							<h5 class="card-title">기본정보</h5>
+							<form name="form" class="row g-3 needs-validation" method="post"
+								action="/usr/v1/infra/product/productUsrInst" novalidate>
+								<div class="row g-2">
+									<div class="col-3">
+										<label for="code" class="form-label mb-0">제품번호 <font
+											color="red"><strong>*</strong></font></label> <input type="text"
+											class="form-control" id="ifpdSeq" name="ifpdSeq"
+											placeholder="자동생성" style="background-color: lightgray;"
+											disabled>
+									</div>
+									<div class="col-sm-12 col-md-6 col-lg-3">
+										<label class="form-label mb-0">제품명</label> <input type="text"
+											class="form-control" name="ifpdName" id="ifpdName"
+											placeholder="제품명을 입력하세요" required>
+									</div>
+									<div class="col-sm-12 col-md-6 col-lg-3">
+										<label class="form-label mb-0">제품가격</label> <input type="text"
+											class="form-control" name="ifpdPrice" id="ifpdPrice"
+											placeholder="제품가격을 입력하세요" required>
+									</div>
+								</div>
+								<div class="row g-2"></div>
+								<div class="row g-2">
+									<div class="col-sm-12 col-md-6 col-lg-3">
+										<label class="form-label mb-0">사용여부 <font color="red"><strong>*</strong></font></label>
+										<select class="form-select" id="ifpdUseNy" name="ifpdUseNy"
+											required>
+											<option selected disable value="">사용여부</option>
+											<option value="1">Y</option>
+											<option value="0">N</option>
+										</select>
+									</div>
+								</div>
+								<div class="row g-2">
+									<div class="col-sm-6 col-md-6 col-lg-6">
+										<label for="validationCustom01" class="form-label mb-0">설명</label>
+										<textarea class="form-control" id="ifpdDesc" name="ifpdDesc"
+											rows="3"></textarea>
+									</div>
+								</div>
+								<div class="row g-2">
+									<div class="col-sm-12 col-md-6 col-lg-3">
+										<label class="form-label mb-0">삭제여부 <font color="red"><strong>*</strong></font></label>
+										<select class="form-select" id="ifpdDelNy" name="ifpdDelNy"
+											required>
+											<option selected disable value="">삭제여부</option>
+											<option value="1">Y</option>
+											<option value="0">N</option>
+										</select>
+									</div>
+								</div>
+								<div class="row g-2">
+									<div class="col">
+										<a href="http://localhost:8080/usr/v1/infra/product/productUsrList"
+											class="btn btn-outline-dark"> <i class="bi bi-list-ul"></i>
+										</a>
+									</div>
+									<div class="col d-flex justify-content-end">
+										<button type="button" id="btnSubmit" class="btn btn-primary">
+											<i class="bi bi-server"></i>
+										</button>
+									</div>
+								</div>
+							</form>
+							<!-- End Multi Columns Form -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- End #main -->
+
+	<!-- ======= Footer ======= -->
+	<th:block th:replace="~{/usr/v1/infra/include/includeFooter :: footer}"></th:block>
+	<!-- End Footer -->
+	<script src="/xdm/v1/jquery/jquery-3.7.1.min.js"></script>
+	<!--Plugins-->
+	<script src="/usr/v1/js/jquery.js"></script>
+	<script src="/usr/v1/js/plugins.js"></script>
+	<!--Template functions-->
+	<script src="/usr/v1/js/functions.js"></script>
+
+	<!--  by developers -->
+	<script>
+		document.getElementById("btnSubmit").onclick = function() {
+
+			form.action = "/usr/v1/infra/product/productUsrInst";
+			form.submit();
+
+		}
+	</script>
+
+</body>
+
+</html>
